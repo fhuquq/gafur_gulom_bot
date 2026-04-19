@@ -45,7 +45,7 @@ async def ask_claude(user_id: int, user_message: str) -> str:
     })
 
     # Gemini API URL
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent?key={api_key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={api_key}"
 
     payload = {
         "system_instruction": {
