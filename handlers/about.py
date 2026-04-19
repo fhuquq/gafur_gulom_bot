@@ -2,7 +2,7 @@ from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery
 from keyboards import main_menu
 from data.gafur_data import POEMS_INFO, STORIES_INFO, BIOGRAPHY
-from handlers.ai_chat import ask_claude
+from handlers.ai_chat import ask_ai
 
 router = Router()
 
@@ -115,7 +115,7 @@ async def handle_general_text(message: Message):
     thinking_msg = await message.answer("🤔 O'ylamoqda...")
     
     try:
-        ai_response = await ask_claude(message.from_user.id, message.text)
+        ai_response = await ask_ai(message.from_user.id, message.text)
         await thinking_msg.delete()
         
         await message.answer(
