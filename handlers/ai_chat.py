@@ -14,70 +14,122 @@ class ChatStates(StatesGroup):
     waiting_for_question = State()
     in_conversation = State()
 
-# Suhbat tarixini saqlash
 conversation_histories = {}
 
 async def ask_claude(user_id: int, user_message: str) -> str:
-    """Google Gemini AI ga savol yuborish va javob olish (BEPUL)"""
-    api_key = os.getenv("GEMINI_API_KEY")
+    """Groq AI ga savol yuborish (BEPUL, tez, kuniga 14400 so'rov)"""
+    api_key = os.getenv("GROQ_API_KEY")
     if not api_key:
-        raise ValueError("GEMINI_API_KEY topilmadi!")
+        raise ValueError("GROQ_API_KEY topilmadi!")
 
-    # Suhbat tarixini olish yoki yangi boshlash
     if user_id not in conversation_histories:
         conversation_histories[user_id] = []
 
     history = conversation_histories[user_id]
+    history.append({"role": "user", "content": user_message})
 
-    # Gemini uchun tarix formati
-    gemini_history = []
-    for msg in history[-18:]:  # oxirgi 18 ta xabar
-        role = "user" if msg["role"] == "user" else "model"
-        gemini_history.append({
-            "role": role,
-            "parts": [{"text": msg["content"]}]
-        })
+    if len(history) > 20:
+        history = history[-20:]
+        conversation_histories[user_id] = history
 
-    # Yangi xabarni qo'shish
-    gemini_history.append({
-        "role": "user",
-        "parts": [{"text": user_message}]
-    })
+    url = "https://api.groq.com/openai/v1/chat/completions"
 
-    # Gemini API URL
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
 
     payload = {
-        "system_instruction": {
-            "parts": [{"text": SYSTEM_PROMPT}]
-        },
-        "contents": gemini_history,
-        "generationConfig": {
-            "maxOutputTokens": 1024,
-            "temperature": 0.7
-        }
+        "model": "llama-3.3-70b-versatile",
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            *history
+        ],
+        "max_tokens": 1024,
+        "temperature": 0.7
     }
 
     async with aiohttp.ClientSession() as session:
-        async with session.post(url, json=payload) as resp:
+        async with session.post(url, headers=headers, json=payload) as resp:
             if resp.status != 200:
                 error_text = await resp.text()
-                raise Exception(f"Gemini API xatosi ({resp.status}): {error_text}")
-            
+                raise Exception(f"Groq API xatosi ({resp.status}): {error_text}")
             data = await resp.json()
-            ai_response = data["candidates"][0]["content"]["parts"][0]["text"]
+            ai_response = data["choices"][0]["message"]["content"]
 
-    # Tarixni yangilash
-    history.append({"role": "user", "content": user_message})
     history.append({"role": "assistant", "content": ai_response})
-
-    # 20 xabardan oshmasin
-    if len(history) > 20:
-        conversation_histories[user_id] = history[-20:]
-    else:
-        conversation_histories[user_id] = history
+    conversation_histories[user_id] = history
 
     return ai_response
+
+@router.message(F.text == "🤖 AI bilan suhbat")
+async def start_ai_chat(message: Message, state: FSMContext):
+    user_id = message.from_user.id
+    if user_id in conversation_histories:
+        conversation_histories[user_id] = []
+
+    await state.set_state(ChatStates.in_conversation)
+    await message.answer(
+        "🤖 *AI Suhbat rejimi faollashdi!*\n\n"
+        "G'afur G'ulom haqida istalgan savolingizni bering.\n\n"
+        "💡 *Misol savollar:*\n"
+        "• Shum bola asarining mavzusi nima?\n"
+        "• G'afur G'ulomning eng mashhur she'ri qaysi?\n"
+        "• Navoiy romanini tahlil qil\n\n"
+        "❌ Tugatish uchun /stop yozing",
+        parse_mode="Markdown",
+        reply_markup=cancel_button()
+    )
+
+@router.message(F.text == "/stop")
+@router.callback_query(F.data == "cancel_chat")
+async def cancel_chat(message_or_callback, state: FSMContext):
+    await state.clear()
+    if isinstance(message_or_callback, CallbackQuery):
+        msg = message_or_callback.message
+        await message_or_callback.answer()
+    else:
+        msg = message_or_callback
+    await msg.answer("✅ Suhbat tugatildi.", reply_markup=main_menu())
+
+@router.message(ChatStates.in_conversation)
+async def handle_ai_message(message: Message, state: FSMContext):
+    if not message.text or not message.text.strip():
+        await message.answer("❗ Iltimos, savol yozing.")
+        return
+
+    thinking_msg = await message.answer("🤔 O'ylamoqda...")
+    try:
+        ai_response = await ask_claude(message.from_user.id, message.text.strip())
+        await thinking_msg.delete()
+        response_text = f"🤖 *AI Javobi:*\n\n{ai_response}\n\n─────────────\n💬 _Davom etish uchun savol bering_"
+        if len(response_text) > 4096:
+            chunks = [response_text[i:i+4096] for i in range(0, len(response_text), 4096)]
+            for chunk in chunks:
+                await message.answer(chunk, parse_mode="Markdown")
+        else:
+            await message.answer(response_text, parse_mode="Markdown")
+    except Exception as e:
+        await thinking_msg.delete()
+        await message.answer(f"❌ Xato: {str(e)}\n\nQayta urinib ko'ring.")
+
+@router.message(F.text.endswith("?"))
+async def handle_question(message: Message, state: FSMContext):
+    current_state = await state.get_state()
+    if current_state == ChatStates.in_conversation:
+        return
+    thinking_msg = await message.answer("🤔 O'ylamoqda...")
+    try:
+        ai_response = await ask_claude(message.from_user.id, message.text)
+        await thinking_msg.delete()
+        await message.answer(
+            f"🤖 *AI Javobi:*\n\n{ai_response}",
+            parse_mode="Markdown",
+            reply_markup=main_menu()
+        )
+    except Exception as e:
+        await thinking_msg.delete()
+        await message.answer(f"❌ Xato: {str(e)}")
 
 # AI suhbat tugmasi
 @router.message(F.text == "🤖 AI bilan suhbat")
