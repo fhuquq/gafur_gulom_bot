@@ -34,15 +34,23 @@ def load_all_texts() -> str:
 
     for filename in sorted(os.listdir(BOOKS_DIR)):
         filepath = os.path.join(BOOKS_DIR, filename)
-        if filename.lower().endswith(".txt"):
+        if not filename.lower().endswith(".txt"):
+            continue
+        
+        content = None
+        # Barcha mumkin bo'lgan kodlashlarni sinab ko'rish
+        for encoding in ["utf-8", "utf-8-sig", "cp1251", "cp1252", "latin-1", "iso-8859-1"]:
             try:
-                with open(filepath, "r", encoding="utf-8") as f:
+                with open(filepath, "r", encoding=encoding) as f:
                     content = f.read().strip()
                 if content:
-                    title = filename.replace(".txt", "").replace("_", " ").title()
-                    texts.append(f"\n\n{'='*50}\nASAR: {title}\n{'='*50}\n{content}")
+                    break
             except Exception:
-                pass
+                continue
+
+        if content:
+            title = filename.replace(".txt", "").replace("_", " ").replace("-", " ").title()
+            texts.append(f"\n\n{'='*50}\nASAR: {title}\n{'='*50}\n{content}")
 
     _knowledge_cache = "\n".join(texts)
     return _knowledge_cache
@@ -158,6 +166,7 @@ async def start_ai_chat(message: Message, state: FSMContext):
     _knowledge_cache = None
     texts = load_all_texts()
     books_count = texts.count("ASAR:") if texts else 0
+    chars = len(texts) if texts else 0
 
     user_id = message.from_user.id
     conversation_histories[user_id] = []
@@ -165,7 +174,8 @@ async def start_ai_chat(message: Message, state: FSMContext):
     await state.set_state(ChatStates.in_conversation)
     await message.answer(
         "🤖 *AI Suhbat rejimi*\n\n"
-        f"📚 Yuklangan asarlar: *{books_count} ta*\n\n"
+        f"📚 Yuklangan asarlar: *{books_count} ta*\n"
+        f"📝 Jami matn hajmi: *{chars:,} belgi*\n\n"
         "G'afur G'ulom haqida istalgan savolingizni bering.\n"
         "AI faqat haqiqiy ma'lumotlarga asoslanib javob beradi.\n\n"
         "💡 *Misol:*\n"
