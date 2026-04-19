@@ -9,12 +9,7 @@ router = Router()
 # Kitoblar va audiolar katalogi
 BOOKS_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "media", "books")
 AUDIO_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "media", "audio")
-# Bu yerga audio fayl nomi va uni o'qigan diktor ismini yozasiz
-AUDIO_READERS = {
-    "Shum_bola": "Anvar Alimov",
-    "Netay": "Zulfiya",
-    "Yodgor": "Afzal Rafiqov"
-}
+
 BOOK_EMOJIS = ["📗", "📘", "📙", "📕", "📓", "📒", "📔", "📖"]
 
 def get_files_from_dir(directory: str, extensions: list) -> list:
@@ -136,7 +131,7 @@ async def download_book(callback: CallbackQuery):
         doc = FSInputFile(book_path, filename=filename)
         await callback.message.answer_document(
             document=doc,
-            caption=f"📖 *{title}*\n✍️ G'afur G'ulom\n\nYoqimli mutolaa! 📚",
+            caption=f"📖 *{title}*\n✍️ G'afur G'ulom\n\nYaxshi o'qishlar! 📚",
             parse_mode="Markdown"
         )
     except Exception as e:
@@ -148,6 +143,7 @@ async def download_book(callback: CallbackQuery):
             ])
         )
 
+# Audio yuklab olish
 @router.callback_query(F.data.startswith("dl_audio_"))
 async def download_audio(callback: CallbackQuery):
     safe_name = callback.data[len("dl_audio_"):]
@@ -157,18 +153,7 @@ async def download_audio(callback: CallbackQuery):
         await callback.answer("❌ Audio topilmadi!", show_alert=True)
         return
 
-    # 1. Fayl nomini olamiz (kengaytmasiz)
-    full_name = os.path.splitext(filename)[0] # Masalan: "Arvohlar-Gafur_Gulom"
-
-    # 2. Nomni '-' belgisi orqali ikkiga ajratamiz
-    if "-" in full_name:
-        title_part, reader_part = full_name.split("-", 1)
-        title = title_part.replace("_", " ").title()
-        reader = reader_part.replace("_", " ").title()
-    else:
-        title = full_name.replace("_", " ").title()
-        reader = "G'afur G'ulom (o'z ijrolari)" # Agar '-' bo'lmasa, shunday chiqadi
-
+    title = filename_to_title(filename)
     audio_path = os.path.join(AUDIO_DIR, filename)
 
     await callback.answer()
@@ -178,16 +163,20 @@ async def download_audio(callback: CallbackQuery):
         audio_file = FSInputFile(audio_path, filename=filename)
         await callback.message.answer_audio(
             audio=audio_file,
-            caption=(
-                f"🎙️ *{title}*\n"
-                f"✍️ Muallif: G'afur G'ulom\n"
-                f"📖 O'qigan: {reader}\n\n"
-                f"Yaxshi tinglashlar! 🎧"
-            ),
+            caption=f"🎙️ *{title}*\n✍️ G'afur G'ulom\n\nYaxshi tinglashlar! 🎧",
             parse_mode="Markdown"
         )
     except Exception as e:
         await callback.message.answer(f"❌ Faylni yuborishda xato: {str(e)}")
+
+@router.callback_query(F.data.in_({"no_books", "no_audio"}))
+async def no_files(callback: CallbackQuery):
+    await callback.answer("Hozircha fayl qo'shilmagan!", show_alert=True)
+
+@router.callback_query(F.data == "back_books")
+async def back_to_books(callback: CallbackQuery):
+    await callback.message.answer("📚 Kitoblar:", reply_markup=build_books_keyboard())
+    await callback.answer()
 
 # Works callbacks
 @router.callback_query(F.data.startswith("works_"))
