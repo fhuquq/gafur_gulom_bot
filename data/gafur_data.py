@@ -7,30 +7,39 @@ BIOGRAPHY = """
 📅 *Tug'ilgan sana:* 1903-yil 10-may
 📍 *Tug'ilgan joy:* Toshkent shahri
 ⚰️ *Vafot etgan:* 1966-yil 10-iyul
-🎖️ *Unvonlari:* O'zbekiston xalq shoiri, Davlat mukofoti sohibi
+🎖️ *Unvonlari:* O'zbekiston xalq shoiri, Buyuk xizmatlari uchun ordeni sohibi.
 ━━━━━━━━━━━━━━━━━━━━━
 
-G'afur G'ulom (to'liq ismi: G'afur G'ulom G'ulomov) — o'zbek sovet adabiyotining yirik vakili, shoir, yozuvchi, dramaturg va tarjimon.
+G'afur G'ulom (to'liq ismi: G'afur G'ulomov) — o'zbek sovet adabiyotining yirik vakili, shoir, yozuvchi, dramaturg va tarjimon.
 
 *Hayoti:*
-Toshkentda hunarmand oilasida tug'ilgan. Erta yoshidan yetim qolgan — otasi 1910-yilda, onasi 1917-yilda vafot etgan. Bu og'ir sinovlar uning "Shum bola" asarida yorqin aks etgan.
+G'afur G'ulomning hayoti va faoliyati haqidagi ushbu ma'lumotlarning o'zbekcha tarjimasi quyidagicha:
+
+Gʻafur Gʻulomovich Gʻulomov 1903-yil 10-mayda Toshkentda kambagʻal oilada tugʻilgan. Uning otasi Gʻulom Mirza Orif rus tilini bilgan, sheʼrxonlikka ishqiboz boʻlgan va oʻzi ham sheʼrlar yozib turgan. Gʻafur Gʻulom endigina toʻqqiz yoshga toʻlganda otasi vafot etadi.
+
+Gʻafur Gʻulom dastlab "eskicha" maktabda (musulmon maktabi) tahsil oladi, keyinchalik esa Turkistondagi mahalliy aholi vakillari uchun moʻljallangan boshlangʻich rus-tuzem maktabiga oʻqishga kiradi. Pedagogik tayyorlov kursini tamomlagach, u zamonaviy maktabda dars bera boshlaydi. 1923-yilda u mehribonlik uyida oʻquv boʻlimi mudiri etib tayinlanadi.
+
+Shu yillar davomida Gʻafur Gʻulom bir qancha nashriyotlar, jumladan, "Kambagʻal dehqon", "Qizil Oʻzbekiston" va "Sharq haqiqati" gazetalarining tahririyatlarida ham faoliyat yuritadi. Tahririyatlardagi ish jarayoni unga oddiy fuqarolar hayotini yaqindan oʻrganish imkonini beradi.
 
 *Ijodi:*
 She'riyat, nashr, dramaturgiya va tarjima sohalarda faoliyat ko'rsatgan. Uning ijodi o'zbek adabiyotida yangi sahifa ochdi.
 
 *Asosiy asarlari:*
 📖 Shum bola (avtobiografik qissa)
-📖 Mening o'g'rigina bolam
-📖 Ko'cha bolasi
-📖 Sariq devlar
-📖 Navoiy (roman)
-📖 Yodgor (she'riy to'plam)
+📖 Mening o'g'rigina bolam hikoyasi
+📖 Yodgor qissasi
+📖 Netay qissasi
+📖 Sen yetim emassan she'ri
+📖 Vaqt she'ri
 
 *Mukofotlari:*
-🏆 Lenin ordeni (2 marta)
-🏆 Qizil Mehnat Bayrog'i ordeni
-🏆 Stalin mukofoti (1946)
-🏆 O'zbekiston Davlat mukofoti
+🏆 Birinchi darajali Stalin mukofoti (1946)
+🏆 Lenin mukofoti (1970)
+🏆 O‘zbekiston SSR xalq shoiri (1963-yil 9-may)
+🏆 Lenin ordeni (1950-yil 16-yanvar; 1957-yil 11-yanvar)
+🏆 Mehnat Qizil Bayroq ordeni (1939-yil 31-yanvar; 1951-yil 6-dekabr; 1963-yil 9-may)
+🏆 "Hurmat Belgisi" ordeni (1944-yil 25-dekabr)
+🏆 "Buyuk xizmatlari uchun" ordeni (2000-yil 25-avgust — vafotidan so‘ng)
 """
 
 POEMS_INFO = """
