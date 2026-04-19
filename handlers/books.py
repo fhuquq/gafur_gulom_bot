@@ -1,4 +1,4 @@
-shi import os
+import os
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery, FSInputFile, InlineKeyboardMarkup, InlineKeyboardButton
 from keyboards import main_menu
@@ -131,7 +131,7 @@ async def download_book(callback: CallbackQuery):
         doc = FSInputFile(book_path, filename=filename)
         await callback.message.answer_document(
             document=doc,
-            caption=f"📖 *{title}*\n✍️ G'afur G'ulom\n\nYoqimli mutolaa! 📚",
+            caption=f"📖 *{title}*\n✍️ G'afur G'ulom\n\nYaxshi o'qishlar! 📚",
             parse_mode="Markdown"
         )
     except Exception as e:
@@ -163,7 +163,7 @@ async def download_audio(callback: CallbackQuery):
         audio_file = FSInputFile(audio_path, filename=filename)
         await callback.message.answer_audio(
             audio=audio_file,
-            caption=f"🎙️ *{title}*\n✍️ G'afur G'ulom\n\nYoqimli mutolaa! 🎧",
+            caption=f"🎙️ *{title}*\n✍️ G'afur G'ulom\n\nYaxshi tinglashlar! 🎧",
             parse_mode="Markdown"
         )
     except Exception as e:
