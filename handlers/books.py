@@ -157,12 +157,19 @@ async def download_audio(callback: CallbackQuery):
         await callback.answer("❌ Audio topilmadi!", show_alert=True)
         return
 
-    title = filename_to_title(filename)
+    # 1. Fayl nomini olamiz (kengaytmasiz)
+    full_name = os.path.splitext(filename)[0] # Masalan: "Arvohlar-Gafur_Gulom"
+
+    # 2. Nomni '-' belgisi orqali ikkiga ajratamiz
+    if "-" in full_name:
+        title_part, reader_part = full_name.split("-", 1)
+        title = title_part.replace("_", " ").title()
+        reader = reader_part.replace("_", " ").title()
+    else:
+        title = full_name.replace("_", " ").title()
+        reader = "G'afur G'ulom (o'z ijrolari)" # Agar '-' bo'lmasa, shunday chiqadi
+
     audio_path = os.path.join(AUDIO_DIR, filename)
-    
-    # Diktor ismini lug'atdan qidirish
-    file_key = os.path.splitext(filename)[0]
-    reader_name = AUDIO_READERS.get(file_key, "G'afur G'ulom (o'z ijrolari)")
 
     await callback.answer()
     await callback.message.answer(f"🎵 *{title}* yuklanmoqda...", parse_mode="Markdown")
@@ -174,7 +181,7 @@ async def download_audio(callback: CallbackQuery):
             caption=(
                 f"🎙️ *{title}*\n"
                 f"✍️ Muallif: G'afur G'ulom\n"
-                f"📖 O'qigan: {reader_name}\n\n"
+                f"📖 O'qigan: {reader}\n\n"
                 f"Yaxshi tinglashlar! 🎧"
             ),
             parse_mode="Markdown"
