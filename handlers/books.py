@@ -9,7 +9,12 @@ router = Router()
 # Kitoblar va audiolar katalogi
 BOOKS_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "media", "books")
 AUDIO_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "media", "audio")
-
+# Bu yerga audio fayl nomi va uni o'qigan diktor ismini yozasiz
+AUDIO_READERS = {
+    "Shum_bola": "Anvar Alimov",
+    "Netay": "Zulfiya",
+    "Yodgor": "Afzal Rafiqov"
+}
 BOOK_EMOJIS = ["📗", "📘", "📙", "📕", "📓", "📒", "📔", "📖"]
 
 def get_files_from_dir(directory: str, extensions: list) -> list:
@@ -143,7 +148,6 @@ async def download_book(callback: CallbackQuery):
             ])
         )
 
-# Audio yuklab olish
 @router.callback_query(F.data.startswith("dl_audio_"))
 async def download_audio(callback: CallbackQuery):
     safe_name = callback.data[len("dl_audio_"):]
@@ -155,6 +159,10 @@ async def download_audio(callback: CallbackQuery):
 
     title = filename_to_title(filename)
     audio_path = os.path.join(AUDIO_DIR, filename)
+    
+    # Diktor ismini lug'atdan qidirish
+    file_key = os.path.splitext(filename)[0]
+    reader_name = AUDIO_READERS.get(file_key, "G'afur G'ulom (o'z ijrolari)")
 
     await callback.answer()
     await callback.message.answer(f"🎵 *{title}* yuklanmoqda...", parse_mode="Markdown")
@@ -163,20 +171,16 @@ async def download_audio(callback: CallbackQuery):
         audio_file = FSInputFile(audio_path, filename=filename)
         await callback.message.answer_audio(
             audio=audio_file,
-            caption=f"🎙️ *{title}*\n✍️ G'afur G'ulom\n\nYaxshi tinglashlar! 🎧",
+            caption=(
+                f"🎙️ *{title}*\n"
+                f"✍️ Muallif: G'afur G'ulom\n"
+                f"📖 O'qigan: {reader_name}\n\n"
+                f"Yaxshi tinglashlar! 🎧"
+            ),
             parse_mode="Markdown"
         )
     except Exception as e:
         await callback.message.answer(f"❌ Faylni yuborishda xato: {str(e)}")
-
-@router.callback_query(F.data.in_({"no_books", "no_audio"}))
-async def no_files(callback: CallbackQuery):
-    await callback.answer("Hozircha fayl qo'shilmagan!", show_alert=True)
-
-@router.callback_query(F.data == "back_books")
-async def back_to_books(callback: CallbackQuery):
-    await callback.message.answer("📚 Kitoblar:", reply_markup=build_books_keyboard())
-    await callback.answer()
 
 # Works callbacks
 @router.callback_query(F.data.startswith("works_"))
