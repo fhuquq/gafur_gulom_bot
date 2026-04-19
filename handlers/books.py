@@ -131,7 +131,7 @@ async def download_book(callback: CallbackQuery):
         doc = FSInputFile(book_path, filename=filename)
         await callback.message.answer_document(
             document=doc,
-            caption=f"📖 *{title}*\n✍️ G'afur G'ulom\n\nYaxshi o'qishlar! 📚",
+            caption=f"📖 *{title}*\n✍️ G'afur G'ulom\n\nYoqimli mutolaa! 📚",
             parse_mode="Markdown"
         )
     except Exception as e:
@@ -163,7 +163,7 @@ async def download_audio(callback: CallbackQuery):
         audio_file = FSInputFile(audio_path, filename=filename)
         await callback.message.answer_audio(
             audio=audio_file,
-            caption=f"🎙️ *{title}*\n✍️ G'afur G'ulom\n\nYaxshi tinglashlar! 🎧",
+            caption=f"🎙️ *{title}*\n✍️ G'afur G'ulom\n\nYoqimli mutolaa! 🎧",
             parse_mode="Markdown"
         )
     except Exception as e:
