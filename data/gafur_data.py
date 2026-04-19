@@ -203,7 +203,7 @@ Ming yillik tarixim — mening sharafim.
 Temur, Navoiy — mening faxrim,
 Ulug'bek — mening iftixorim."
 
-3. "MEN YAHUDIYNI SEVAMAN" (1941)
+3. "MEN YAHUDIY SEVAMAN" (1941)
 Urush yillarida xalqlar do'stligiga bag'ishlangan she'r. Barcha xalqlar birligi haqida.
 
 4. "TOSHKENTIM"
