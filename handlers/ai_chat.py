@@ -14,7 +14,12 @@ class SearchState(StatesGroup):
 BOOKS_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "media", "books")
 _cache = None
 
+# ═══════════════════════════════════════
+# FAYLLARNI O'QISH
+# ═══════════════════════════════════════
+
 def load_texts() -> dict:
+    """Barcha TXT fayllarni o'qib qaytarish {fayl_nomi: matn}"""
     global _cache
     if _cache is not None:
         return _cache
@@ -41,95 +46,117 @@ def load_texts() -> dict:
     _cache = result
     return result
 
-def extract_snippet(content: str, word: str, radius: int = 600) -> str:
-    """So'z topilgan joydan radius belgi oldin va keyin matn olish"""
-    idx = content.lower().find(word.lower())
-    if idx == -1:
-        return ""
-    
-    start = max(0, idx - radius)
-    end = min(len(content), idx + len(word) + radius)
+# ═══════════════════════════════════════
+# QIDIRUV TIZIMI
+# ═══════════════════════════════════════
 
-    # Eng yaqin yangi qatordan boshlansin
+def get_snippet(content: str, pos: int, radius: int = 500) -> str:
+    """Topilgan pozitsiyadan radius belgi oldin va keyin matn olish"""
+    start = max(0, pos - radius)
+    end = min(len(content), pos + radius)
+
+    # Qatorning boshidan boshlash
     if start > 0:
-        border = content.rfind('\n', 0, start)
-        if border > 0:
-            start = border + 1
+        nl = content.rfind('\n', 0, start)
+        if nl != -1:
+            start = nl + 1
 
-    # Eng yaqin yangi qatorda tugasin
+    # Qatorning oxirida tugatish
     if end < len(content):
-        border = content.find('\n', end)
-        if border > 0:
-            end = border
+        nl = content.find('\n', end)
+        if nl != -1:
+            end = nl
 
     snippet = content[start:end].strip()
     prefix = "...\n" if start > 0 else ""
     suffix = "\n..." if end < len(content) else ""
     return prefix + snippet + suffix
 
-def search_texts(query: str, max_results: int = 3) -> list:
+def search_texts(query: str) -> list:
+    """
+    Aqlli qidiruv:
+    1. Avval to'liq ibora sifatida qidiradi
+    2. Topilmasa, har bir so'zni alohida qidiradi
+    """
     texts = load_texts()
     if not texts:
         return []
 
-    query = query.strip().rstrip("?").rstrip("؟")
-    words = [w for w in re.findall(r'\w+', query.lower()) if len(w) > 2]
-    if not words:
-        return []
+    query_clean = query.strip().rstrip("?؟").strip()
+    query_lower = query_clean.lower()
 
     results = []
+
+    # === 1-usul: TO'LIQ IBORA QIDIRISH ===
     for title, content in texts.items():
         content_lower = content.lower()
+        pos = content_lower.find(query_lower)
+        if pos != -1:
+            # Necha marta uchraydi
+            count = content_lower.count(query_lower)
+            snippet = get_snippet(content, pos, radius=600)
+            results.append((count * 10, title, snippet))  # Ko'p uchraydi = yuqori ball
 
-        score = 0
-        found_words = []
-        for w in words:
-            if w in content_lower:
-                cnt = content_lower.count(w)
-                score += cnt * (2 if len(w) > 4 else 1)
-                found_words.append(w)
+    # === 2-usul: SO'ZLARNI ALOHIDA QIDIRISH (1-usul topilmasa) ===
+    if not results:
+        words = [w for w in re.findall(r'\w+', query_lower) if len(w) > 2]
+        if not words:
+            return []
 
-        if not found_words:
-            continue
+        for title, content in texts.items():
+            content_lower = content.lower()
 
-        # Eng uzun (muhim) so'z atrofidan snippet olish
-        best_word = max(found_words, key=lambda w: len(w))
-        snippet = extract_snippet(content, best_word, radius=600)
+            # Eng uzun so'zni topish (muhimroq)
+            best_word = max(words, key=lambda w: len(w))
+            best_pos = content_lower.find(best_word)
 
-        if snippet:
+            if best_pos == -1:
+                continue
+
+            # Hammasi bormi tekshirish
+            score = sum(content_lower.count(w) for w in words if w in content_lower)
+            snippet = get_snippet(content, best_pos, radius=600)
             results.append((score, title, snippet))
 
+    # Ballga ko'ra saralash, takrorlarni olib tashlash
     results.sort(key=lambda x: x[0], reverse=True)
-
     seen = set()
     unique = []
     for score, title, snippet in results:
-        key = snippet[3:63]  # prefix "..." ni o'tkazib yuborish
+        key = snippet[:80].strip()
         if key not in seen:
             seen.add(key)
             unique.append((score, title, snippet))
 
-    return unique[:max_results]
+    return unique[:3]
+
+# ═══════════════════════════════════════
+# FORMATLASH
+# ═══════════════════════════════════════
 
 def format_answer(query: str, results: list) -> str:
     if not results:
         return (
-            f"❌ *'{query}'* haqida ma'lumot topilmadi.\n\n"
+            f"❌ *'{query}'* haqida hech narsa topilmadi.\n\n"
             "💡 Boshqa so'z bilan sinab ko'ring:\n"
-            "• `tug'ilgan yili`\n"
-            "• `she'rlari`\n"
-            "• `Shum bola`"
+            "• Isim: `Toshbibi`, `G'afur G'ulom`\n"
+            "• Asar: `Shum bola`, `Navoiy`\n"
+            "• Mavzu: `she'r`, `urush`, `1903`"
         )
 
     if len(results) == 1:
         _, title, snippet = results[0]
         return f"📖 *{title}*\n\n{snippet}"
 
-    response = f"📚 *'{query}'* bo'yicha natijalar:\n\n"
+    response = f"📚 *'{query}'* bo'yicha *{len(results)} ta* natija:\n\n"
     for i, (_, title, snippet) in enumerate(results, 1):
-        short = snippet[:700] + "\n..." if len(snippet) > 700 else snippet
-        response += f"*{i}. {title}*\n{short}\n\n{'─'*15}\n\n"
+        short = snippet[:800] + "\n..." if len(snippet) > 800 else snippet
+        response += f"*{i}. {title}*\n{short}\n\n{'─' * 20}\n\n"
     return response
+
+# ═══════════════════════════════════════
+# HANDLERS
+# ═══════════════════════════════════════
 
 @router.message(F.text == "🔍 Qidirish")
 async def start_search(message: Message, state: FSMContext):
@@ -143,11 +170,11 @@ async def start_search(message: Message, state: FSMContext):
     await message.answer(
         "🔍 *Qidirish*\n\n"
         f"📚 Yuklangan fayllar: *{count} ta*\n"
-        f"📝 Jami matn: *{total:,} belgi*\n\n"
-        "Qidirmoqchi bo'lgan so'z yoki ismni yozing:\n\n"
+        f"📝 Jami matn hajmi: *{total:,} belgi*\n\n"
+        "So'z yoki ibora yozing:\n\n"
         "💡 *Misol:*\n"
         "• `Toshbibi` — shaxs ismi\n"
-        "• `Turksib` — mavzu\n"
+        "• `Sen yetim emassan` — asar nomi\n"
         "• `1918` — sana\n"
         "• `Shum bola` — asar nomi\n\n"
         "❌ Tugatish: /stop",
@@ -165,16 +192,15 @@ async def do_search(message: Message):
     if not query:
         return
 
-    searching_msg = await message.answer("🔍 Qidiryapman...")
+    wait_msg = await message.answer("🔍 Qidiryapman...")
     results = search_texts(query)
-    await searching_msg.delete()
+    await wait_msg.delete()
 
     response = format_answer(query, results)
     response += "\n\n💬 _Yangi so'z yozing yoki /stop bosing_"
 
     if len(response) > 4096:
-        chunks = [response[i:i+4000] for i in range(0, len(response), 4000)]
-        for chunk in chunks:
+        for chunk in [response[i:i+4000] for i in range(0, len(response), 4000)]:
             await message.answer(chunk, parse_mode="Markdown")
     else:
         await message.answer(response, parse_mode="Markdown")
