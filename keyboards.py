@@ -7,7 +7,7 @@ def main_menu() -> ReplyKeyboardMarkup:
     return ReplyKeyboardMarkup(
         keyboard=[
             [
-                KeyboardButton(text="🤖 AI bilan suhbat"),
+                KeyboardButton(text="🔍 Qidirish"),
                 KeyboardButton(text="📚 Kitoblar")
             ],
             [
@@ -23,7 +23,7 @@ def main_menu() -> ReplyKeyboardMarkup:
             ]
         ],
         resize_keyboard=True,
-        input_field_placeholder="Menyu tanlang yoki savol yozing..."
+        input_field_placeholder="Menyu tanlang yoki so'z qidiring..."
     )
 
 def books_menu() -> InlineKeyboardMarkup:
