@@ -1,0 +1,1170 @@
+{
+  "metadata": {
+    "nom": "G'afur G'ulom Milliy Ma'lumotlar Bazasi",
+    "versiya": "1.0",
+    "yaratilgan": "2023",
+    "maqsad": "Bot qidiruv tizimi uchun G'afur G'ulom hayoti, ijodi, asarlari va tadqiqotlari to'liq ma'lumotlar bazasi",
+    "til": "O'zbek",
+    "kalit_sozlar": [
+      "G'afur G'ulom",
+      "o'zbek adabiyoti",
+      "XX asr",
+      "shoir",
+      "yozuvchi",
+      "akademik",
+      "tarjimon"
+    ]
+  },
+  "shaxs": {
+    "to'liq_ism": "G'afur G'ulom",
+    "asl_ismi": "Abdulg'afur G'ulom Mirzo Orif o'g'li",
+    "taxallus": [
+      "G'ulom",
+      "Mirzo"
+    ],
+    "tug'ilgan_sana": "1903-yil 10-may, juma kuni, erta bilan soat 6:00",
+    "tug'ilgan_joy": {
+      "shahar": "Toshkent",
+      "daha": "Shayxovantohur dahasi",
+      "mahalla": "Qo'rg'ontegi mahallasi",
+      "o'sha_paytdagi_nom": "Moskva rayoni, Profsoyuz ko'chasi"
+    },
+    "vafot_sana": "1966-yil 10-iyun",
+    "vafot_yoshi": 63,
+    "dafn_etilgan": "Toshkent shahri Chig'atoy qabristoni",
+    "millatlar": "O'zbek",
+    "fuqarolik": "O'zbekiston SSR fuqarosi",
+    "unvonlar": [
+      "O'zbekiston xalq shoiri",
+      "Akademik (O'zbekiston Fanlar akademiyasi haqiqiy a'zosi, 1943-yildan)",
+      "SSSR Davlat mukofoti laureati (1946)",
+      "O'zbekiston SSR Oliy Soveti deputati"
+    ],
+    "mukofotlar": [
+      {
+        "nom": "SSSR Davlat mukofoti (Davlat mukofoti laureati)",
+        "yil": 1946,
+        "sabab": "'Sharqdan kelayotirman' – 'Iду s Vostoka' kitoblari uchun"
+      },
+      {
+        "nom": "Lenin ordeni",
+        "miqdor": 1,
+        "izoh": "Bir marta berilgan"
+      },
+      {
+        "nom": "'Mehnat Qizil Bayrog'i' ordeni",
+        "miqdor": 2,
+        "izoh": "Ikki marta berilgan"
+      },
+      {
+        "nom": "'Hurmat belgisi' ordeni",
+        "miqdor": 1,
+        "izoh": "Bir marta berilgan"
+      },
+      {
+        "nom": "Beruniy nomidagi O'zbekiston Davlat mukofoti",
+        "izoh": "Olmos Axmedovaning so'ziga ko'ra"
+      },
+      {
+        "nom": "Medallar",
+        "izoh": "Bir necha medallar bilan mukofotlangan"
+      }
+    ]
+  },
+  "oilasi": {
+    "otasi": {
+      "ism": "G'ulom Mirzo Orif o'g'li",
+      "tug'ilgan_yil": "taxminan 1868",
+      "vafot_yil": 1912,
+      "vafot_yoshi": 44,
+      "kasbi": "Savodli kishi, arizanavis, kotib; qishloq ham tutgan (Kalas atrofida 5-6 tanob yer)",
+      "tillari": [
+        "O'zbek",
+        "Tojik",
+        "Rus (uncha-muncha)"
+      ],
+      "ijodi": "Mirza va G'ulom taxalluslari bilan she'rlar yozgan, lekin hech qaerda bosilmagan",
+      "tarif": "O'sha davr shoir va rassomlari (Xislat, Shomurod kotib, Furqat, Muhiy, Muqimiy, Toshxo'ja Asiriy) bilan do'st bo'lgan",
+      "sabab_vafot": "O'pka shamollashidan, shifokor chaqirilmay"
+    },
+    "onasi": {
+      "ism": "Toshbibi Shoyusuf qizi",
+      "tug'ilgan_yil": "taxminan 1882",
+      "vafot_yil": 1918,
+      "vafot_yoshi": 36,
+      "tarif": "O'zbek, tojik adabiyotini o'qib anglaydigan zehnli xotin"
+    },
+    "akasi": {
+      "ism": "Nomi ko'rsatilmagan",
+      "tarif": "G'afurni Oqchi mahallasidagi rus-tuzem bilim yurtiga o'qishga bergan; 'Temurlan' tamaki fabrikasidan uyga ish olib kelar edi; uylanib boshqa hovliga ko'chib ketgan"
+    },
+    "opa_singillar": [
+      {
+        "ism": "Sabriniso",
+        "jinsi": "qiz"
+      },
+      {
+        "ism": "Rahbarniso",
+        "jinsi": "qiz"
+      },
+      {
+        "ism": "Bahriniso (Bahri)",
+        "jinsi": "qiz",
+        "izoh": "G'afur 9 yoshida otasi vafot etganda 6 oylik edi"
+      }
+    ],
+    "rafiqasi": {
+      "ism": "Muharram G'ulomova (Muharram opa)",
+      "vafot": "1995-yil",
+      "tarif": "O'zbekistonning atoqli davlat arbobi; adibning ko'p jihatdan muvaffaqiyatiga hissa qo'shgan; tunlari yangi she'rlariga 'doyalik qilgan', mehmonlarni kutib-jo'natgan, farzandlarni tarbiyalagan",
+      "xarakter": "G'afur G'ulomning injiqliklariga, jahl-g'azabiga, sho'xliklariga, hazillariga chidagan benazir ayol"
+    },
+    "farzandlari": [
+      {
+        "ism": "Ulug' G'afurovich G'ulomov",
+        "tug'ilgan": "1933-yil 1-oktyabr",
+        "vafot": "1990-yil 15-mart",
+        "kasbi": "Mashhur fizik olim",
+        "unvoni": "O'zbekiston Fanlar akademiyasi muxbir a'zosi (1973), O'zbekistonda xizmat ko'rsatgan fan arbobi (1983), fizika-matematika fanlari doktori (1972)",
+        "ish_joylari": "O'zbekiston FA Fizika-texnika instituti, O'zbekiston FA Yadro fizikasi instituti (direktor 1969-1978)",
+        "mukofot": "Beruniy nomidagi O'zbekiston Davlat mukofoti (1970)",
+        "xotira": "Toshkent shahri Ulug'bek dahasidagi ko'chalardan biri uning nomi bilan ataladi"
+      },
+      {
+        "ism": "Qodir G'ulomov",
+        "tug'ilgan": "1945-yil 17-fevral, Toshkent",
+        "kasbi": "Fizika-matematika fanlari doktori, professor",
+        "ta'lim": "Toshkent davlat universiteti (hozirgi MU nomidagi O'zMU) fizika fakulteti",
+        "lavozimlar": [
+          "O'zbekiston Respublikasi Qurolli Kuchlari Akademiyasi boshlig'i (1999-may – 2000-sentabr)",
+          "Mudofaa vaziri o'rinbosari",
+          "O'zbekiston Respublikasi mudofaa vaziri (2000-yil 29-sentabr – 2005-yil 18-noyabr)"
+        ],
+        "mukofotlar": [
+          "Beruniy nomidagi O'zbekiston Davlat mukofoti laureati (1983)",
+          "'Mustaqillik' ordeni (1992)",
+          "II darajali 'Shon-sharaf' ordeni (2003)"
+        ]
+      },
+      {
+        "ism": "Mirzo Xondamir G'ulomov (Xondamir G'ofurovich G'ulomov)",
+        "kasbi": "Tarix fanlari doktori, professor"
+      },
+      {
+        "ism": "Holida G'ulomova",
+        "jinsi": "qiz"
+      },
+      {
+        "ism": "Olmos Axmedova (G'ulomova, Olmos G'ofurovna Axmedova)",
+        "kasbi": "Adabiyotshunos olima, G'afur G'ulom uy-muzeyi direktori",
+        "farzandlari": [
+          {
+            "ism": "Durbek Qudratillaevich Axmedov",
+            "kasbi": "Iqtisod fanlari doktori"
+          },
+          {
+            "ism": "Jo'rabek Qudratillaevich Axmedov",
+            "kasbi": "Irrigatsiya muhandisi"
+          },
+          {
+            "ism": "Gavharshodbegim Qudratillaevna Rustamova (Axmedova)",
+            "kasbi": "Tarix fanlari nomzodi, siyosatshunos"
+          }
+        ]
+      },
+      {
+        "ism": "Toshxon Yo'ldosheva (G'ulomova)",
+        "jinsi": "qiz"
+      }
+    ]
+  },
+  "hayot_tarixi": {
+    "bolalik": {
+      "davr": "1903-1912",
+      "tavsif": "Toshkentning Qo'rg'ontegi mahallasida o'sgan. 5 ta yetim bola orasida kattalari. Otasi 1912-yilda vafot etganda 9 yoshida edi. Onasi 1918-yilda vafot etganda 15 yoshida edi.",
+      "savod_chiqarish": "Juda tezfahm, kichikligida mahalliy Abdurahmon Pari nomli yigit 16 yilda 'Haftiyak'dan o'ta olmagan, G'afur esa tez o'zlashtirgan",
+      "birinchi_jahon_urushi": "1914-yildan urush boshlandi, og'a-inisining ishi qolmadi, rosmana qiynchiliklarga duchor bo'lishdi",
+      "mehnat": "Oilani boqish uchun 'Temurlan' tamaki fabrikasidan uyga ish olib, qo'lda papiroslar tayyorlaganlar – kuniga 10 mingga yaqin"
+    },
+    "ta'lim": [
+      {
+        "muassasa": "Eski maktab (mahalliy)",
+        "davr": "yoshlik yillari"
+      },
+      {
+        "muassasa": "8-samsonskoe russko-tuzemnoe uchilishche (Oqchi mahallasi)",
+        "davr": "1916-yil kuz",
+        "izoh": "Akasi uni o'qishga bergan; rus tilini o'rganish uchun"
+      },
+      {
+        "muassasa": "Sakkiz oylik muallimlarni tayyorlash kursi",
+        "davr": "taxminan 1918-1919",
+        "izoh": "Ustozlari – Abdurahmon Soyiboyev"
+      },
+      {
+        "muassasa": "Toshkent pedagogika instituti",
+        "holat": "Tamomlagan"
+      }
+    ],
+    "mehnat_faoliyati": [
+      {
+        "lavozim": "Bosmaxona naborshiki – harf teruvchi",
+        "davr": "taxminan 1918-1919",
+        "izoh": "Ustozi: keksa ishchi Abdurahmon Soyiboyev"
+      },
+      {
+        "lavozim": "O'qituvchi – boshlang'ich maktab",
+        "muassasa": "O'rdadagi boshlang'ich maktab",
+        "davr": "1919-yil 23-martdan",
+        "izoh": "Pedagogik faoliyatning boshlanishi"
+      },
+      {
+        "lavozim": "Komsomol va o'qituvchilar profsoyuzi a'zosi",
+        "davr": "1919"
+      },
+      {
+        "lavozim": "Bolalar uyi – internat mudir",
+        "davr": "1923",
+        "izoh": "Maorif komissarligi va bolalar boqimsizligi bilan kurash jamiyati buyrug'i bilan; 150 bolalik internat; Feliks Edmundovich Dzerjinskiy sharafiga 'Felisk bolalari' deb atalgan"
+      },
+      {
+        "lavozim": "'Urfon' o'rta maktabining tashkilotchisi",
+        "davr": "1923",
+        "muassasa": "O'rda"
+      },
+      {
+        "lavozim": "Toshkent shahar maorif xodimlari komsomol komitetiga sekretar",
+        "davr": "1924-1925"
+      },
+      {
+        "lavozim": "Maorif soyuzi rais o'rinbosari",
+        "davr": "1924-1925"
+      },
+      {
+        "lavozim": "Ikki maktab va bir internatga mudir",
+        "davr": "1924-1928"
+      },
+      {
+        "lavozim": "'Kambag'al dehqon' gazetasiga sekretar",
+        "davr": "1928-yil 15-sentyabrdan",
+        "joy": "Samarqand (redaksiya ko'chganda)"
+      },
+      {
+        "lavozim": "'Sharq haqiqati' gazetasiga sekretar",
+        "davr": "1930",
+        "joy": "Toshkent"
+      },
+      {
+        "lavozim": "Adabiy xodim, felyetonist, kotib",
+        "muassasalar": [
+          "'Qizil O'zbekiston'",
+          "'Yer yuzi' jurnali",
+          "'Mushtum' jurnali"
+        ],
+        "davr": "1930-1942"
+      },
+      {
+        "lavozim": "O'zbekiston Fanlar akademiyasining haqiqiy a'zosi (akademik)",
+        "davr": "1943-yildan",
+        "izoh": "FA tashkil etilganida birinchilardan bo'lib saylanган"
+      }
+    ]
+  },
+  "ijodi": {
+    "umumiy_tavsif": "G'afur G'ulom she'riyat, nasr, dramaturgiya, adabiyotshunoslik, jurnalistika va tarjima sohasida ijod qilgan. U birinchi galda shoirdir. She'riyatida realizmga tayanib, insonparvarlik, vatanparvarlik, adolat, mehr-oqibat g'oyalarini ulug'lagan.",
+    "she_riyati": {
+      "birinchi_she_r": {
+        "nom": "Feliks farzandlari (ba'zi manbalarda – Feliks bolalari)",
+        "yil": 1923,
+        "sabab": "Yetim bolalar internati – shoir o'zining yetimlik davrini eslab, hukumatning go'daklarga g'amxo'rligini ko'rib yozgan"
+      },
+      "mashhur_she_rlar": [
+        {
+          "nom": "Go'zallik qayerda (Birinchi nashr etilgan she'rlardan)",
+          "yil": "taxminan 1923",
+          "mavzu": "Go'zallik - mehnat va erkin hayotda, qiz ko'zlarida emas",
+          "izoh": "Ikki kishining suhbati tarzida qurilgan; Vohid Zohidov tomonidan yuqori baholangan"
+        },
+        {
+          "nom": "Vaqt",
+          "yil": "1945-yil 18-19 sentabr (Said Ahmadning xotirasiga ko'ra)",
+          "mavzu": "Vaqtning qadri, fursatning g'animatligi, inson umri va abadiyat",
+          "xarakter": "Falsafiy, deep; Hamid G'ulom to'plam uchun undirib olgan",
+          "satrlar_namunasi": "Gʻuncha ochilguncha oʻtgan fursatni / Kapalak umriga qiyos etgulik...",
+          "tarixiy_holat": "She'r ertasiga 'Pravda'da rus tilida bosilgan",
+          "Said_Ahmad_xotirasi": "Tong otguncha yozishgan, Said Ahmad uni 'xiralik' bilan yozdirishga majbur qilgan"
+        },
+        {
+          "nom": "Sen yetim emassan",
+          "yil": 1942,
+          "mavzu": "Urushda ota-onasini yo'qotgan bolalarga tasalli; Vatan – ona, xalq – ota",
+          "izoh": "'Pravda' gazetasida bosilgan; frontdagilarga katta ta'sir ko'rsatgan; 30 tilga tarjima qilingan",
+          "sabab": "Toshkent vokzalida evakuatsiya qilingan bolalarni kutib olib, ularning g'amgin ko'zlari shoirni ilhomlantirgan",
+          "tasiri": "F. M. Cheburaxin frontdan maktub yozgan; Kolya Sergienko uni 'ikkinchi otam' deb atagan",
+          "Maqsud_Shayxzoda_bahosi": "'Mukammal bir she'riy salosa' (trilogiya)ning bir qismi",
+          "Anna_Axmatova_tarjimasi": "Yana bir varianti A.Axmatova tomonidan tarjima qilingan (Toshkentda evakuatsiyada bo'lgan paytda)"
+        },
+        {
+          "nom": "Sog'inish",
+          "yil": 1942,
+          "mavzu": "O'g'lini frontga kuzatgan otaning sog'inch dardi; bog' va shaftoli tasviri bilan",
+          "Maqsud_Shayxzoda_bahosi": "'Bu xasratnoma G'afur G'ulomning shoh g'azali deyishga loyiq' asar",
+          "xarakter": "Lirik, falsafiy, qayg'uli"
+        },
+        {
+          "nom": "Kuzatish",
+          "yil": 1941,
+          "sarlavha_to'liq": "O'g'lim Jo'raxonning harbiy xizmatga chaqirilishi munosabati bilan",
+          "mavzu": "Farzandni frontga kuzatayotgan ota; vatanparvarlik; urushning aql-idrok bilan qabul qilinishi",
+          "izoh": "'Qizil O'zbekiston' gazetasida bosilgan",
+          "xarakter": "Fuqarolik she'riyatining namunaси"
+        },
+        {
+          "nom": "Men yahudiyman (Men yahudiy)",
+          "yil": 1941,
+          "nashr": "1941-yil 26-iyun",
+          "mavzu": "Fashizmga qarshi; yahudiy xalqini himoya qilish; insonning inson oldidagi tengligи",
+          "xarakter": "Siyosiy pafos, lirik-epik; Maqsud Shayxzoda – 'mukammal she'riy salosa'ning bir qismi",
+          "xalqaro_tan_olinishi": "Isroilning Kiriyat Gat shahrida G'afur G'ulom maydoni tashkil etilgan (2005); 2021-yil 10-may yana ochildi",
+          "Nisan_Niyazov_bahosi": "'Bu she'r – yuqori darajadagi agitka, fashizmga hukm, lirik poema va siyosiy pamflet'"
+        },
+        {
+          "nom": "G'oliblar bayrami",
+          "mavzu": "G'alaba shodiyonasi; oila dardi bilan birga umumxalq shodiyonasi",
+          "Maqsud_Shayxzoda_bahosi": "'Mukammal trilogiya'ning uchinchi qismi"
+        },
+        {
+          "nom": "Turksib yo'llarida",
+          "mavzu": "Turkiston-Sibir temir yo'li qurilishi; mehnat qahramonligi"
+        },
+        {
+          "nom": "Non",
+          "yil": 1931,
+          "mavzu": "Non – hayot manbasigina emas, g'oya ramzi"
+        },
+        {
+          "nom": "Toshkent",
+          "yil": 1933,
+          "mavzu": "Ona shahar manzarasi; shaharga sevgi"
+        },
+        {
+          "nom": "Bog'",
+          "yil": 1934,
+          "mavzu": "Tabiat, bog', g'ayrat, do'stlik; bog'bonlik"
+        },
+        {
+          "nom": "Alisher",
+          "mavzu": "Alisher Navoiy ulug'loviga bag'ishlangan; Navoiy – ozodlik va muhabbat kuychisi",
+          "izoh": "Said Ahmadning xotirasiga ko'ra G'afur G'ulom 'Alisher' she'rini mashhur she'rlaridan biri deb hisoblagan"
+        },
+        {
+          "nom": "Qor",
+          "mavzu": "Tabiat – qish; mohir mo'yqalam sohibi kabi betakror manzara"
+        },
+        {
+          "nom": "Xotin",
+          "yil": 1942,
+          "mavzu": "Insoniyatning onasi; falsafiy tavsif"
+        },
+        {
+          "nom": "Bizning ko'chada ham bayram bo'lajak",
+          "mavzu": "Umid; kelajakka ishonch; g'alabaga intilish"
+        },
+        {
+          "nom": "Pol Robsonga",
+          "mavzu": "Irqchilikka qarshi; afroamerikali qo'shiqchi Pol Robsonni qo'llab-quvvatlash"
+        },
+        {
+          "nom": "Sharaf qo'lyozmasi",
+          "mavzu": "O'zbek xalqining qadimiyligini isbotlash; ingliz lordining o'zbeklarni 'qabila' deyishiga rad"
+        },
+        {
+          "nom": "Bizning uyga qo'nib o'ting, do'stlarim",
+          "mavzu": "Mehmondo'stlik; o'zbek xalqining bag'rikengligи",
+          "izoh": "Polyaklik shoir Rakovskiy bu she'rni o'qib maktub yozgan"
+        },
+        {
+          "nom": "Tun bilan tong (Muxammas)",
+          "mavzu": "Navoiy g'azaliga bag'ishlangan muxammas; tun va tong – yaxshilik va yomonlik kurashi",
+          "xarakter": "Dramatik ohang"
+        },
+        {
+          "nom": "Assalom",
+          "mavzu": "Umr – takror bo'lmas; hayotning qadrini bilish"
+        },
+        {
+          "nom": "Qozoq elining ulug' to'yi",
+          "mavzu": "Qozoq va o'zbek xalqlari do'stligi",
+          "Said_Ahmad_tomonidan": "Said Ahmad tomonidan G'afur G'ulomning eng yaxshi she'rlaridan biri deb sanалgan"
+        },
+        {
+          "nom": "Yigitlarga",
+          "mavzu": "Yosh avlodga – vatanparvarlik, burch, mas'uliyat haqida"
+        }
+      ],
+      "she_riy_to'plamlari": [
+        {
+          "nom": "Gulnoza",
+          "yil": 1929
+        },
+        {
+          "nom": "Dinamo",
+          "yil": 1931
+        },
+        {
+          "nom": "Xitoy rasmlari",
+          "yil": 1932
+        },
+        {
+          "nom": "Jonli qo'shiqlar (Tirik qo'shiqlar)",
+          "yil": 1932
+        },
+        {
+          "nom": "O'zbekiston",
+          "yil": 1936
+        },
+        {
+          "nom": "Sharqdan kelganlar",
+          "yil": 1943,
+          "izoh": "SSSR Davlat mukofotiga sazovor bo'lgan"
+        },
+        {
+          "nom": "Biz tirik odamlarmiz",
+          "yil": "—"
+        },
+        {
+          "nom": "She'rlar",
+          "yil": 1949
+        },
+        {
+          "nom": "Yangi she'rlar",
+          "yil": "urushdan keyingi yillar"
+        },
+        {
+          "nom": "O'zbekiston olovlari",
+          "yil": "—"
+        },
+        {
+          "nom": "Onalar",
+          "yil": "—"
+        },
+        {
+          "nom": "O'zbek xalq g'ururi",
+          "yil": "—"
+        },
+        {
+          "nom": "Tong qo'shig'i",
+          "yil": "—"
+        },
+        {
+          "nom": "Yashasin, tinchlik!",
+          "yil": "—"
+        },
+        {
+          "nom": "Bu – sening imzoing",
+          "yil": "—"
+        },
+        {
+          "nom": "Moskva – dunyo qal'asi",
+          "yil": 1951
+        }
+      ]
+    },
+    "nasriy_asarlari": {
+      "qissalar": [
+        {
+          "nom": "Netay",
+          "yil": 1930,
+          "janr": "Qissa",
+          "mavzu": "Yetim qiz Netay taqdiri; o'sha davr jamiyatidagi ayollar huquqsizligi; odам savdosi; qozixonadagi poraxo'rlik",
+          "bosh_qahramon": "Netay (Nataша)",
+          "xarakter": "Realistik; ijtimoiy tanqid; melodramatik elementlar bor",
+          "izoh": "Asarda Semyon va uning xotini – rus oilasi insoniylik timsoli sifatida; Samad, Saydrahimboy, qozi – yovuz kuchlar"
+        },
+        {
+          "nom": "Yodgor",
+          "yil": 1936,
+          "janr": "Qissa",
+          "mavzu": "Begona bolani o'z farzandidek qabul qilish; erk va ta'lim; Joʻra va Saodat muhabbati",
+          "bosh_qahramonlar": [
+            "Jo'ra",
+            "Saodat",
+            "Yodgor",
+            "Mehri"
+          ],
+          "syujet": "Jo'ra boshqaning bolasini o'z bolasi deb qabul qilib, turmush quradi; asrning oxirida Mehri haqiqatni ochadi. Saodat Yodgorni o'z bolasidek ko'radi.",
+          "g'oyalar": [
+            "Insonparvarlik",
+            "Ma'rifat",
+            "Tenglik",
+            "Sadoqat",
+            "Jasorat"
+          ]
+        },
+        {
+          "nom": "Shum bola",
+          "yil": "1936-yilda yozila boshlangan, 1962-gacha davom etgan",
+          "janr": "Qissa (avtobiografik)",
+          "bosh_qahramon": "Qoravoy (Muallifning o'zi)",
+          "mavzu": "XX asr boshi Toshkent hayoti; bolalardagi yo'qchilik, tashlanib qolish, sarguzashtlar; jamiyatdagi mullalik, bozorchilik, qoloqlik satirasi",
+          "xarakter": "Hajviy-realistik; qissa yozilib bitmagani sababi muallif 1966-yilda vafot etgan",
+          "Mirmuhsin_xotirasi": "1961-yilda Shoahmad Shorahmedovga aytib turar, u arabcha xat bilan yozib olar edi. Mirmuhsin oq qog'ozga ko'chirar edi.",
+          "jahon_tan_olinishi": "BBCning 'Barcha davrlarning 100 ta eng buyuk bolalar kitoblari' ro'yxatiga kiritilgan",
+          "Habib_Abdiyev_bahosi": "Xalqimizning ruhiyatiga juda singib ketgan asar; unda ma'rifatparvar bobolarimizning g'oyalari ufurib turadi"
+        },
+        {
+          "nom": "Tirilgan murda",
+          "janr": "Qissa/Hikoya",
+          "mavzu": "Zamonaviy texnikadan bexabar kishilar; qoloq kishilarning o'tkir tanqidi"
+        }
+      ],
+      "hikoyalar": [
+        {
+          "nom": "Mening o'g'rigina bolam",
+          "yil": 1965,
+          "mavzu": "O'g'ri va keksa kampir o'rtasidagi insoniy muloqot; qashshoqlik; urushning oqibatlari; insoniylik va andisha",
+          "bosh_qahramonlar": [
+            "O'g'ri (nomi yo'q)",
+            "Roqiya bibi (qora buvi)"
+          ],
+          "voqea_davri": "1917-yil – Birinchi jahon urushi davri",
+          "g'oyasi": "Qanchalik og'ir sharoitda bo'lmasin, insoniylikni yo'qotmaslik",
+          "O'tkir_Hoshimov_bahosi": "'O'zbekning odami manaman, deb ko'rinib turadi'; 'Bu asarni O. Genri hikoyalari bilan qiyoslar, ammo boshqa bir xalq ko'rinmaydi'"
+        },
+        {
+          "nom": "Hiylai shar'iy",
+          "yil": 1930,
+          "janr": "Hikoya",
+          "mavzu": "Shariatning noto'g'ri ishlatilishi; talonchilik"
+        },
+        {
+          "nom": "Kim aybdor?",
+          "mavzu": "Zamonaviy texnikadan bexabar Madmusa; qoloq kishilarning tanqidi"
+        },
+        {
+          "nom": "Chorasi ko'rildi",
+          "mavzu": "Idoraviy beparvolik, byurokratiya, sansalorlik; hujjatlardagi bir xato butun odamning hayotini chalkashtirib yuborishи",
+          "zamonaviy_aloqa": "O'zbekiston Respublikasi Prezidentining byurokratiyaga qarshi farmonlari bilan aloqador"
+        },
+        {
+          "nom": "Chorbozorchi",
+          "mavzu": "Bozordagi aldov; halollik; Ahmad Sedob obrazi orqali savdogarlardagi muammolar",
+          "xarakter": "Hajviy"
+        },
+        {
+          "nom": "Shoshilinch telegramma",
+          "yil": 1931,
+          "mavzu": "Pochta xatoligidan kelib chiqqan kulgili-qayg'uli holat; ona o'limi xabari va aslida boshqaga yuborilgan xat",
+          "xarakter": "Yumoristik, hajviy"
+        },
+        {
+          "nom": "Farzandi solih",
+          "mavzu": "Ota-onaning farzandga muhabbati; hayotiy sinovlar; bozordagi tajribalar; Ostonaqul obrazi"
+        },
+        {
+          "nom": "Guvohlikka o'tgan ho'kiz",
+          "mavzu": "Yot unsurlarning jamiyatga kirib olishi; jinoyatchilik"
+        },
+        {
+          "nom": "Ko'ngilsizning 'qiligi'",
+          "janr": "Hikoya"
+        },
+        {
+          "nom": "Xasan Kayfiy",
+          "janr": "Hikoya, mashhur"
+        },
+        {
+          "nom": "Xojibobo gulfurush",
+          "janr": "Hikoya, mashhur"
+        }
+      ],
+      "pyesalar": [
+        {
+          "nom": "Jaloliddin",
+          "muharrir": "Oybek bilan hamkorlikda",
+          "mavzu": "Jaloliddin Mang'uberdi tarihiy siymosi"
+        },
+        {
+          "nom": "Muxbir sudi",
+          "janr": "Pyesa"
+        }
+      ]
+    },
+    "ilmiy_va_adabiy_maqolalar": [
+      {
+        "nom": "Navoiy va zamonamiz (Navoiy va bizning davr)",
+        "yil": 1948
+      },
+      {
+        "nom": "Farhod va Shirin (zamonaviy tilga tabdil)",
+        "yil": 1940,
+        "izoh": "Navoiyning dostonini hozirgi tilga o'girish"
+      },
+      {
+        "nom": "Folklordan o'rganaylik",
+        "yil": 1939
+      },
+      {
+        "nom": "Jaloliddin dramasi haqida",
+        "yil": 1945
+      },
+      {
+        "nom": "Muqimiy",
+        "yil": 1941
+      },
+      {
+        "nom": "Furqat",
+        "yil": "—"
+      },
+      {
+        "nom": "Muqimiy bayozi (nашр uchun tayyorlagan)",
+        "yil": 1938
+      },
+      {
+        "nom": "Sharq nazmi osmonining ikki porloq quyoshi",
+        "mavzu": "Navoiy haqida"
+      },
+      {
+        "nom": "Buyuk ustoz",
+        "mavzu": "Navoiy haqida"
+      },
+      {
+        "nom": "Muqimiy va Muhyi",
+        "mavzu": "Muqimiy tadqiqi"
+      },
+      {
+        "nom": "Muqimiy maktublari",
+        "mavzu": "Muqimiy hayoti haqida"
+      },
+      {
+        "nom": "Demokrаt shoir",
+        "mavzu": "Muqimiy haqida"
+      },
+      {
+        "nom": "Ayniyga",
+        "yil": 1935,
+        "mavzu": "Tojik adib Sadriddin Ayniyga bag'ish"
+      },
+      {
+        "nom": "Hurmatli ustoz (Muhtaram ustod)",
+        "yil": 1953,
+        "mavzu": "Sadriddin Ayniy haqida"
+      }
+    ]
+  },
+  "tarjimonlik": {
+    "umumiy_tavsif": "G'afur G'ulomning 12 jildlik 'Mukammal asarlar to'plami'ning 8, 9 va 10-jildlari tarjimalardan tashkil topgan (jami 1600 sahifadan oshiq). U 50 ga yaqin xorijiy adib asarlarini o'girgan.",
+    "sharq_adabiyotidan": [
+      {
+        "muallif": "Abu Abdulloh Rudakiy",
+        "asar": "'Qarilikdan shikoyat' (Shikoyat az piri) qasidasi",
+        "til": "Forsiy"
+      },
+      {
+        "muallif": "Shayx Muslihiddin Sa'diy",
+        "asar": "'Guliston' asaridan she'riy parchalar (800 misrdan ortiq)",
+        "til": "Forsiy"
+      },
+      {
+        "muallif": "Abdurahmon Jomiy",
+        "asar": "G'azallaridan namunalar",
+        "til": "Forsiy"
+      },
+      {
+        "muallif": "Mirzo Abdulqodir Bedil",
+        "asar": "Ikki ruboiy (hamkorlikda: Nosir Said bilan)",
+        "til": "Forsiy",
+        "izoh": "Bedilni tarjima qilishning murakkabligidan asosiy tarjimadan bosh tortgan"
+      },
+      {
+        "muallif": "Hofiz",
+        "asar": "G'azallaridan namunalar",
+        "til": "Forsiy"
+      },
+      {
+        "muallif": "Shota Rustaveli",
+        "asar": "'Yo'lbars terisidagi pahlavon' dostonidan boblar",
+        "til": "Gruzin"
+      },
+      {
+        "muallif": "Nizomiy",
+        "asar": "Asarlardan",
+        "til": "Forsiy"
+      },
+      {
+        "muallif": "Alisher Navoiy",
+        "asar": "'Farhod va Shirin' dostonini zamonaviy o'zbek tiliga tabdil qilish (1940)",
+        "til": "Eski o'zbek",
+        "izoh": "Navoiy tilini hozirgi kitobxonga yaqinlashtirish uchun"
+      },
+      {
+        "muallif": "Abduqosim Lohutiy",
+        "asar": "'Kreml' dostonini ikki marta ikki vaznda o'girган",
+        "til": "Tojik"
+      }
+    ],
+    "rus_va_g'arb_adabiyotidan": [
+      {
+        "muallif": "Vladimir Mayakovskiy",
+        "asar": "'Vo ves golos' poemasini 'Hayqiriq' nomi bilan",
+        "yil": 1930
+      },
+      {
+        "muallif": "Aleksandr Pushkin",
+        "asar": "Bir qancha she'r va poemalar"
+      },
+      {
+        "muallif": "Mixail Lermontov",
+        "asar": "She'rlar; 'Borodino'; 'Hoji Abrek' dostoni"
+      },
+      {
+        "muallif": "Aleksandr Griboedov",
+        "asar": "'Aqllilik balosi'dan parchalar"
+      },
+      {
+        "muallif": "Nikolay Nekrasov",
+        "asar": "She'rlar"
+      },
+      {
+        "muallif": "Taras Shevchenko",
+        "asar": "She'rlar"
+      },
+      {
+        "muallif": "Aleksey Tolstoy",
+        "asar": "She'rlar"
+      },
+      {
+        "muallif": "Ivan Krilov",
+        "asar": "Masallar"
+      },
+      {
+        "muallif": "Vilyam Shekspir",
+        "asar": "'Otello' tragediyasi (1940); 'Qirol Lir' (1956)",
+        "til": "Ingliz"
+      },
+      {
+        "muallif": "Lope de Vega",
+        "asar": "'Qo'zibuloq qishlog'i' drамasi",
+        "til": "Ispan"
+      },
+      {
+        "muallif": "Fridrih Shiller",
+        "asar": "'Vilgelm Tell' dramasi",
+        "til": "Nemis"
+      },
+      {
+        "muallif": "Nozim Hikmat",
+        "asar": "'Bir sevgi afsonasi' pyesasi; she'rlar",
+        "til": "Turk"
+      },
+      {
+        "muallif": "Iogannes Bexer",
+        "asar": "She'rlar"
+      },
+      {
+        "muallif": "Pablo Neruda",
+        "asar": "She'rlar"
+      },
+      {
+        "muallif": "Langston Xyuz",
+        "asar": "She'rlar"
+      },
+      {
+        "muallif": "Aleksandr Surkov",
+        "asar": "Leninга bag'ishlangan 'Marks' nomli asar"
+      },
+      {
+        "muallif": "Musa Jalil",
+        "asar": "Tarjima"
+      },
+      {
+        "muallif": "Hodi Taqtosh",
+        "asar": "She'rlar to'plami (Tatarcha; 1932); 'Muhabbat tavbasi', 'Taqtosh o'ldi', '27 yanvar', 'Quyundan so'ng', 'Sen dushmanim mening', 'Javob'"
+      },
+      {
+        "muallif": "Mushfiq Kozimiy",
+        "asar": "'Qo'rqinchli Tehron' romani",
+        "til": "Forsiy"
+      },
+      {
+        "muallif": "Shomil Usmonov",
+        "asar": "'Pomirdan radio' fantastik povesti",
+        "til": "Tatarcha"
+      },
+      {
+        "muallif": "Musa Jalil",
+        "asar": "Tarjimalar"
+      },
+      {
+        "muallif": "Aleksey Tvardovskiy",
+        "asar": "'Yiroq-yiroqlarda' poemasidan 'Sibir chiroqlari' bobi (1961)"
+      },
+      {
+        "muallif": "Aleksandr Kuleshov",
+        "asar": "She'rlar"
+      },
+      {
+        "muallif": "Konstantin Simonov",
+        "asar": "She'rlar"
+      },
+      {
+        "muallif": "Mirzo Tursunzoda",
+        "asar": "Asarlar"
+      },
+      {
+        "muallif": "Demyan Bedniy",
+        "asar": "She'rlar"
+      },
+      {
+        "muallif": "Jambul",
+        "asar": "She'rlar"
+      }
+    ],
+    "tarjima_usuli": "O'zbek tiliga yaqin, sodda va jaydari til; asliyat ruhini saqlab qolish; tabiiy, o'zbekona ifodalar; Shoislom Shomuhamedovning guvohligiga ko'ra ustoz Bedilни tarjima qilish masalasida juda ehtiyotkor bo'lgan",
+    "tadqiqotchilar_bahosi": "Korney Chukovskiy: 'Agar unda asosiy narsa – muallif uslubining badiiy individualligи ko'rinsa, bu tarjimani ko'kka ko'tarib maqtasa arziydi'",
+    "zuhriddin_isomiddinov_bahosi": "Gafur G'ulomni 'sof milliy ijodkor' sifatida tanishadi, tarjimonligi uning asarlar to'plami soyasida qolib ketgan"
+  },
+  "navoiyshunoslik": {
+    "umumiy_tavsif": "G'afur G'ulom Navoiy ijodini chuqur o'rgangan va xalqchilashtirgan. U navoiyshunoslikning xalqchil yo'nalishini shakllantirgan ijodkor.",
+    "xizmatlari": [
+      "Navoiy tilini hozirgi kitobxonga yaqinlashtirish ('Farhod va Shirin' tabdili, 1940)",
+      "Navoiy g'azallariga bag'ishlangan muxammaslar yaratish ('Tun bilan tong' – eng yuksak tatabbu'lardan biri)",
+      "Navoiy haqida maqolalar ('Buyuk ustoz', 'Sharq nazmi osmonining ikki porloq quyoshi', 'Navoiy va zamonamiz')",
+      "Navoiy yubiley tadbirlarida nutqlar so'zlash",
+      "Navoiyni insonparvarlik, adolat va ma'rifat timsoli sifatida talqin etish"
+    ],
+    "muhim_asarlar": [
+      {
+        "nom": "Alisher (she'r)",
+        "izoh": "Navoiyni insoniyat farzandi, ozodlik va muhabbat kuychisi sifatida tasvirlaydi"
+      },
+      {
+        "nom": "'Farhod va Shirin' dostonini zamonaviy tilga tabdil",
+        "yil": 1940
+      },
+      {
+        "nom": "'Tun bilan tong' muxammasi",
+        "izoh": "Navoiy g'azaliga muxammas; adabiyotda eng yuksak tatabbu'lardan biri"
+      }
+    ]
+  },
+  "muqimiy_tadqiqi": {
+    "umumiy": "G'afur G'ulom Muqimiy ijodini o'rganish va omallashtirish borasida ulkan ish qilgan.",
+    "xizmatlari": [
+      "1938-yilda 'Muqimiy bayozi'ni jорий yozuvda nашр etishga tayyorlash",
+      "Muqimiy tanlangan asarlarining uchta nashрini tayyorlash",
+      "Muqimiy haqida bir nechta adabiy-tanqidiy maqolalar",
+      "Muqimiy uju-muzeyini muntazam ziyorat qilish"
+    ],
+    "maqolalar": [
+      "Mulla Muhammad Aminxo'ja Muqimiy",
+      "Muqimiy maktublari",
+      "Muqimiy va Muhyi",
+      "Muqimiyning yangi uch she'ri",
+      "Demokrat shoir"
+    ]
+  },
+  "adabiy_aloqalar_xalqaro": {
+    "tojik_adabiyoti": {
+      "Sadriddin_Ayniy": "30 yillik do'stligi; ustoz sifatida qabul qilgan; 1935-yilda 'Ayнiyga' she'r yozgan; 1953-yilda 'Hurmatli ustoz' maqola",
+      "Mirzo_Tursunzoda": "Ijodiy hamkorlik; ikki o'xshash doston: G'afur G'ulomniki 'Ko'kan', Tursunzodaniki 'Hasan arobakash'",
+      "Abduqosim_Lohutiy": "'Kreml' dostonini ikki marta o'girgan",
+      "Rahimov_Jalil": "Do'st va hamkor"
+    },
+    "tatar_adabiyoti": {
+      "Hodi_Taqtosh": "1919-yilda Toshkentda tanishgan; 1928-yilda Qozonga birgа borgan; she'rlarini tarjima qilgan",
+      "Musa_Jalil": "1928-yilda Qozonga sayohatda tanishgan; kelajakli shoir deb baholagan",
+      "Munirhon_Muinzoda": "Toshkentlik tojik shoiri; birgalikda xatlashuv saqlanib qolgan"
+    },
+    "boshqird_adabiyoti": {
+      "Sayfi_Kudash": "Uzoq davom etgan do'stlik; tortiqli kitoblar va xatlar",
+      "izoh": "Kudash G'afur G'ulomni 'butun talantini, yuragining jo'shqin tuyg'ularini ona yurtga, jоnajоn xalqiga bag'ishlagan shoir' sifatida baholagan"
+    },
+    "isroil_aloqalari": {
+      "izoh": "Isroilning Kiriyat Gat shahrida G'afur G'ulom maydoni (2005); 'Men yahudiyman' she'ri ivrit tiliga tarjima qilingan"
+    }
+  },
+  "shaxsiyat_va_xarakter": {
+    "umumiy_tavsif": "Hazilkash, xushchaqchaq, ko'nglida kiri yo'q, saxovatli, insonparvar, xalqparvar shoir. Nasriddin afandining xislatlariga ega – ezgulik, donolik, topqirlik, hattoki shumlik.",
+    "hazilkashligi": [
+      "Adiblар xiyobonidagi haykali – do'ppini qiyshiq qo'ndirgan alpqomat shoir timsoli",
+      "Shoir bolalik do'sti Oybek uni umri oxirigacha 'Shum bola' deb atagan",
+      "Omon Muxtor: 'Buxorodagi Labihovuzdagi Nasriddin Afandi haykaliga razm solsangiz, G'afur akani eslatadi'",
+      "Dostlarining suratlarini kulgi bilan chizar, Said Ahmadning ko'z yumib suratini chiqarardi",
+      "'Ilhom parisi' deb Said Ahmadni atardi",
+      "Radiol qalam haqi xususida (Ozod Sharafiddinov xotirasi): 'G'afur Gulom buni bilmoqchi emas edi, qadrimni bilmoqchi edim'"
+    ],
+    "insonparvarligi": [
+      "Zilzila paytida (1966) xalq tashvishidan katta g'am chekkan",
+      "Yetim bolalar internatida ishlagan",
+      "Urushda evakuatsiya qilingan bolalar uchun she'r yozgan",
+      "Toshkent vokzalida 'siroта eshelonlarini' o'zi kutib olgan"
+    ],
+    "oilaparvarlik": "Muharram opaga cheksiz mehr ko'rsatgan; safarlarda albatta oilasiga sovg'a olib kelgan; bolalariga tengdoshдek muomala qilgan; nabiralarini benihoya sevgan"
+  },
+  "tanqidchilar_baholari": {
+    "Oybek": {
+      "kasbi": "Shoir, yozuvchi, adabiyotshunos, Xalq yozuvchisi, FA akademigi",
+      "baho": "G'afur – o'zbek sovet poeziyasining oldingi shoirlaridan, yetaklovchi kuchlaridan biri. Uning she'r va dostonlari aksar jangovar va kurashchan ruhni ifodalaydi. Talantli shoir ijodi tiklanish davrida boshlanadi.",
+      "asarlari": "Oybek G'afur G'ulomning shеʼriy to'plamlarini ('Dinamo', 'Tirik qo'shiqlar') bir-bir tahlil qilgan"
+    },
+    "Abdulla_Qahhor": {
+      "kasbi": "Yozuvchi, O'zbekiston xalq yozuvchisi",
+      "baho": "G'afur Gulom o'zbek adabiyotini mehр-muhabbat bilan o'stiran, uni ko'p millatli adabiyot maydoniga olib chiqqan yozuvchilarimizdan biridir. Uning ijodiy kamoloti xalqimizning moddiy va madaniy hayotidagi mislsiz zo'r o'zgarishlar bilan bog'liqdir.",
+      "qo'shimcha": "Aziz asrimizning aziz onlari, / Aziz odamlardan so'raydi qadrin... – bu bandlar G'afur G'ulom haqida maqtov sifatida keltirilgan"
+    },
+    "Vohid_Zohidov": {
+      "kasbi": "Adabiyotshunos, olim",
+      "baho": "Ko'p millatli Sovet xalqi hamda adabiyotining bu atoqli arbоbi... Sharq shoiri ekanligini takror-takror aytishni sevardi. Tasodifiy emaski, uning SSSR davlat mukofotiga sazovar bo'lgan to'plami ham 'Sharqdan kelayotirman' deb atalardi.",
+      "qo'shimcha": "Zarb kor novator shoir va yangi o'zbek adabiyotining asoschilaridan biri"
+    },
+    "Sharaf_Rashidov": {
+      "kasbi": "Yirik davlat arbobi, yozuvchi",
+      "baho": "Yirik shoirlarning hayoti va ijodini ulug'vor daryo bilan qiyoslash mumkin. G'afur G'ulom ijodining O'zbekiston adabiyotida butun bir davr. Xalqning jo'shqin hayotidan chiqqan, qaynoq qalbini, bor ijodini unga bag'ishlagan G'afur G'ulom to'la ma'noda xalq adibi edi.",
+      "qo'shimcha": "G'afur G'ulom nomi O'zbekiston Respublikasining tashkil topishi va ravnaqi tarixi bilan chambarchas bog'liqdir"
+    },
+    "Maqsud_Shayxzoda": {
+      "kasbi": "Shoir, yozuvchi, dramaturg",
+      "baho": "O'z hayoti va ijodi bilan o'z xalqining manfaatdorligiga va hurmatiga sazovor bo'lgan baxtiyor adiblardan biri. Uning lirik taronalari, epik obrazlar, hikoyalar, ocherk va felyetonlarida hamisha xalqning sog'lom va progressiv intilishlarini aks ettirdi.",
+      "qo'shimcha": "'Kuzatish', 'Sog'inish', 'G'oliblar bayrami' she'rlarini 'mukammal bir she'riy salosa (trilogiya)' deb baholagan"
+    },
+    "Korney_Chukovskiy": {
+      "kasbi": "Rus yozuvchisi, bolalar shoiri, tarjimon va adabiyotshunos",
+      "baho": "G'afur G'ulom ko'p uslubli shoirdir. Ayniqsa, xalq tuyg'ularini ifodalash va fikrning hissiyligи shoir ijodining yetakchi belgisidir. Uning o'zbek oilasi tomonidan rus bolasining tarbiyaga olinishi va farzandini frontga jo'natish aksеttirилgan she'rlarida sentimentallik emas, balki buyuk hayotiy qudrat ufurib turadi."
+    },
+    "Umarali_Normatov": {
+      "kasbi": "Adabiyotshunos, tanqidchi",
+      "baho": "G'afur G'ulom qirq yildan oshiqroq ijodiy faoliyati davomida boy adabiy xazina yaratdi. Uning she'riyati mamlakatimizning, jahonning olis chekkalarigacha yetib bordi. G'afur G'ulomning nasriy merosi ham g'oyat salmoqlidir.",
+      "qo'shimcha": "O'zbek realistik prozasining tug'ilishi va rivojida uning xizmati Abdulla Qodiriy, Oybek, Abdulla Qahhor singari atoqli nosirlarimiz xizmatidan aslo kam emas"
+    },
+    "O'tkir_Hoshimov": {
+      "kasbi": "Yozuvchi",
+      "baho": "G'afur G'ulom, hech shubhasiz, ulkan iste'dod sohibi. Uning she'riyatida arslon na'rasiga o'xshash guldiragan qudrat bor. G'oyat teran falsafa bor. Shoir eng oddiy voqea haqida yozganida ham qamrovi nihoyatda keng falsafiy umumlashmalar qilishga qodir.",
+      "qo'shimcha": "'Shum bola'ni muallifning o'zi ekanligi aniq. 'Mening o'g'rigina bolam' – eng zabardast asarlaridan biri"
+    },
+    "Suvon_Meli": {
+      "kasbi": "Filologiya fanlari nomzodi",
+      "baho": "G'afur G'ulom o'z davrining shoiri, bir paytning o'zida barcha davrlar shoiridir. Ushbu qo'sh xislat har qanday ulug' shoir uchun zaruriy belgidir. O'z davrida qolib ketgan shoirlar qancha.",
+      "qo'shimcha": "Adiblar xiyobonidagi haykali xushchaqchaq, o'ktam, sal-pal quv, do'ppini qiyshiq qo'ndirgan alpqomat shoir timsolini gavdalantiradi"
+    },
+    "Ibrohim_G'ofurov": {
+      "kasbi": "O'zbekiston qahramoni, O'zbekistonda xizmat ko'rsatgan san'at arbobi, adabiyotshunos, yozuvchi",
+      "baho": "Adabiyotimizda 'G'afur G'ulom bolalari' degan bir tushuncha bo'lishini yoshlik paytlarimdan beri orzu qilaman. Urush va urushdan keyingi avlod G'afur G'ulomning otashin, porloq, erkalovchi padarona she'rlarini o'qib tarbiyalandi.",
+      "qo'shimcha": "Erkin Vohidov ham G'afur G'ulom bolalaridan edi"
+    },
+    "Rahmon_Qo'chqor": {
+      "kasbi": "Toshkent davlat yuridik universiteti dotsenti",
+      "baho": "G'afur G'ulomlar avlodini 'sho'ro fuqarochligi'ning tor, temir ramkasiga aslo sig'dirib bo'lmaydi. G'afur G'ulom, Oybek, Maqsud Shayxzoda, Mirtemir singari adiblar chinakam o'zbek milliy ijodkorlari edi.",
+      "qo'shimcha": "Ular davr yo'l qo'ygan va qo'ymagan darajada ham chin fuqarolik, ham ijodkorlik vazifasini ado etganlar"
+    },
+    "Sanobar_To'laganova": {
+      "kasbi": "Adabiyotshunos",
+      "baho": "G'afur G'ulom – favqulodda iste'dod egasi, yirik ijodiy fenomen. Shunday katta yozuvchi mafkuraga anchayin dastyor bo'lib qolmagan. 'Shum bola' qissasini 1936-yili yozishga chog'lanishi jumboq; millat tarixida o'chmas iz qoldirgan qatagʻon arafasida shunday asarni yozgan.",
+      "qo'shimcha": "'Dovdirash' – asarning dastlabki nomi; bu faqatgina asar mazmuniga emas, yozuvchiga ham, jamiyatga ham taalluqli"
+    },
+    "Abdulhamid_Cho'lpon": {
+      "kasbi": "Shoir, yozuvchi",
+      "baho": "Biz ko'p shoirlarning she'rlarini olib qaraganimizda vazn masalasi chatoqligini ko'ramiz. Hatto G'afur G'ulomdek katta shoirlarimizda ham shunday kamchiliklar bor. She'rda qofiya, vazn ham muhim ahamiyatga ega. Lekin shu bilan birga, she'rning ruhi (g'oyasi) ham esdan chiqarilmasin.",
+      "manba": "1937-yil 7-8-aprelda O'zbekiston yozuvchilari yig'ilishidagi nutq"
+    }
+  },
+  "qisqa_xotiralar_va_voqealar": {
+    "Vaqt_she_ri_yozilishi": {
+      "sana": "1945-yil 18-19 sentabr",
+      "holat": "Said Ahmad 'Qizil O'zbekiston' gazetasidan she'r undirishga kelgan; tong otguncha yozishgan; Said Ahmad she'rga doir xotira maqolasini keyinroq yozgan",
+      "Said_Ahmad_iqtibasи": "Tong yorishib, birinchi tramvay o'tganda she'rning oxirgi satri yozilayotgan edi... 'Agar sen xiralik qilib turib olmaganingda, kim biladi, bu she'r yozilarmidi, yo'qmidi' – dedi G'afur aka."
+    },
+    "Radyo_epizodi": {
+      "manba": "Ozod Sharafiddinov xotirasi",
+      "holat": "G'afur G'ulom radioning adabiyot bo'limiga borib qalam haqi masalasida gapirgan. Yigitlar 'eski she'rlariga qalam haqi berilmaydi' deganida: 'G'afur G'ulomning asarlari eskirmaydi!' – deb javob bergan"
+    },
+    "Qozon_safari": {
+      "yil": 1928,
+      "hamroh": "Ziyo Said",
+      "holat": "Tatar ijodkorlari: Xodi Taqtosh, Musa Jalil, Odil Qutuy va boshqalar bilan tanishgan"
+    },
+    "Shum_bola_yozilishi_Mirmuhsin_xotirasi": {
+      "manba": "Mirmuhsin (yozuvchi), 1961-yil",
+      "holat": "'Yosh gvardiya' nashriyotidan kelgan Mirmuhsin G'afur G'ulomning 'Shum bola'sini qayta nашр etish uchun muallif fikrini bilishga kelgan. G'afur G'ulom: 'Men Shum bolani qaytadan yozaman' – deb Shoahmad Shorahmedovga aytib, u arabcha xat bilan yozib olgan; Mirmuhsin oq qog'ozga ko'chirgan"
+    },
+    "Mirmuhsin_Yoz_boshi_she_ri_xotirasi": {
+      "holat": "G'afur G'ulom she'rni 1961-yil iyunda hazil so'zlar aralash, hamrohlar bilan gaplashib o'tirgan holda yozgan; har band bitganda o'qib bergan va 'She'rni G'afur G'ulom yozib, o'liklarni hindu yuvsin' deb maqtangan"
+    },
+    "Zilzila_epizodi_Muharram_xotirasi": {
+      "manba": "Muharram G'ulomova xotirasi",
+      "holat": "1966-yil Toshkent zilzilasidan so'ng G'afur G'ulom yotig'i bilan xarobalarni aylanib, chodirdagi bolalarni ko'rib yig'lagan. Xalq tashvishi uni o'z og'riqlaridan ulug' tutgan. Vafotidan sal oldin Qozonga – Abdulla To'qayning 80 yilligi uchun bormoqchi bo'lgan."
+    }
+  },
+  "asarlar_ro'yxati_to'liq": {
+    "she_rlar": [
+      "Feliks farzandlari (1923)",
+      "Go'zallik qayerda",
+      "Turksib yo'llarida",
+      "Non (1931)",
+      "Toshkent (1933)",
+      "Bog' (1934)",
+      "Yalovbardorlikka",
+      "Qutbda saylovlar (1937)",
+      "Bilib qo'yki, seni vatan kutadi (1941)",
+      "Men yahudiyman (1941)",
+      "Qish (1941)",
+      "Sen yetim emassan (1942)",
+      "Ayol (1942)",
+      "Sog'inish (1942)",
+      "Kuzatish (1941)",
+      "Afsuski, pushaymonlar ko'milmagan (1945)",
+      "Kuz keldi (1945)",
+      "Vaqt (1945)",
+      "Siz – yosh (1947)",
+      "Hammasi sizniki (1947)",
+      "Bahor ohanglari (1948)",
+      "Kuzgi ko'chatlar (1948)",
+      "Assalom kommunizmga! (1949)",
+      "Pol Robsonga (1949)",
+      "Kim o'rganadi, kim o'rgatadi (1950)",
+      "Vatan baxti (1951)",
+      "Yangi Yerda bayram (1957)",
+      "Yodgar (1961)",
+      "Lenin va Sharq (1961)",
+      "Alisher",
+      "Qor",
+      "Xotin",
+      "G'oliblar bayrami",
+      "Bizning ko'chada ham bayram bo'lajak",
+      "Aql va qalam",
+      "Yigitlarga",
+      "Tun bilan tong (muxammas)",
+      "Bizning uyga qo'nib o'ting, do'stlarim",
+      "Sharaf qo'lyozmasi",
+      "Farg'ona uchun",
+      "Kulol va zargar",
+      "Siyohdon",
+      "Qardosh tojik xalqiga o'zbek xalqidan salom"
+    ],
+    "qissalar": [
+      "Netay (1930)",
+      "Yodgor (1936)",
+      "Shum bola (1936-1962)"
+    ],
+    "hikoyalar": [
+      "Hiylai shar'iy (1930)",
+      "Kim aybdor?",
+      "Tirilgan murda",
+      "Mening o'g'rigina bolam (1965)",
+      "Farzandi solih",
+      "Chorasi ko'rildi",
+      "Chorbozorchi",
+      "Guvohlikka o'tgan ho'kiz",
+      "Shoshilinch telegramma (1931)",
+      "Ko'ngilsizning qiligi",
+      "Hasan Kayfiy",
+      "Xojibobo gulfurush"
+    ],
+    "pyesalar": [
+      "Jaloliddin (Oybek bilan hamkorlikda)",
+      "Muxbir sudi"
+    ],
+    "ilmiy_asarlar": [
+      "Navoiy va zamonamiz (1948)",
+      "Folklordan o'rganaylik (1939)",
+      "Muqimiy (1941)",
+      "Jaloliddin dramasi haqida (1945)",
+      "Muqimiy bayozi (nashr, 1938)",
+      "Farhod va Shirin (tabdil, 1940)"
+    ]
+  },
+  "kalit_soʻzlar_qidiruv": {
+    "shaxs": [
+      "G'afur G'ulom",
+      "G'afur Gulom",
+      "Abdulg'afur",
+      "akademik shoir",
+      "Gafur Gulyam"
+    ],
+    "hayot": [
+      "1903",
+      "Toshkent",
+      "Qo'rg'ontegi",
+      "yetim",
+      "bosmaxona",
+      "internat",
+      "1966"
+    ],
+    "asarlar": [
+      "Shum bola",
+      "Sen yetim emassan",
+      "Vaqt",
+      "Sog'inish",
+      "Netay",
+      "Yodgor",
+      "Mening o'g'rigina bolam",
+      "Men yahudiyman"
+    ],
+    "g'oyalar": [
+      "insonparvarlik",
+      "vatanparvarlik",
+      "adolat",
+      "mehnat",
+      "do'stlik",
+      "xalqlararo do'stlik"
+    ],
+    "janrlar": [
+      "she'riyat",
+      "nasr",
+      "qissa",
+      "hikoya",
+      "tarjima",
+      "adabiyotshunoslik",
+      "felyeton"
+    ],
+    "davr": [
+      "XX asr",
+      "sovet davri",
+      "urush yillari",
+      "mustamlakachilik",
+      "Toshkent zilzilasi 1966"
+    ],
+    "odamlar": [
+      "Oybek",
+      "Abdulla Qahhor",
+      "Said Ahmad",
+      "Muharram G'ulomova",
+      "Olmos Axmedova",
+      "Vohid Zohidov",
+      "Maqsud Shayxzoda",
+      "Sadriddin Ayniy",
+      "Mirzo Tursunzoda"
+    ],
+    "joylar": [
+      "Adiblar xiyoboni",
+      "G'afur G'ulom uy-muzeyi",
+      "Arpapoyadagi hovli",
+      "Furqat ko'cha"
+    ],
+    "mukofotlar": [
+      "Davlat mukofoti 1946",
+      "Lenin ordeni",
+      "akademik",
+      "Xalq shoiri"
+    ]
+  },
+  "qo'shimcha_ma'lumotlar": {
+    "asarlar_hajmi": "Hayotida 100 dan ortiq kitob va to'plamlar chiqgan (tarjimalar bilan); 12 jildlik Mukammal asarlar to'plami",
+    "uy_muzeyi": {
+      "manzil": "Toshkent shahri, Furqat ko'cha (Beshyog'och dahasi)",
+      "yashagan_davr": "1942-1966-yillar",
+      "direktor": "Olmos Axmedova (G'afur G'ulomning qizi)"
+    },
+    "haykali": {
+      "joy": "Adiblar xiyoboni (O'zbekiston Milliy bog'i hududida)",
+      "tavsif": "Do'ppini qiyshiq qo'ndirgan alpqomat shoir"
+    },
+    "Isroil_G'afur_G'ulom_maydoni": {
+      "joy": "Kiriyat Gat shahri, Isroil",
+      "yil": 2005,
+      "sabab": "'Men yahudiyman' she'ri uchun"
+    },
+    "BBC_royxati": "'Shum bola' – BBCning 'Barcha davrlarning 100 ta eng buyuk bolalar kitoblari' ro'yxatiga kiritilgan",
+    "TDYU_G'afur_G'ulom_stipendiyasi": "Toshkent davlat yuridik universiteti G'afur G'ulom nomidagi stipendiya va ko'krak nishoni ta'sis etgan (2020-yilgi Vazirlar Mahkamasining 502-son qaroriga muvofiq)"
+  }
+}
