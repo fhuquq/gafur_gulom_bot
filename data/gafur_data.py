@@ -10,27 +10,32 @@ BIOGRAPHY = """
 🎖️ *Unvonlari:* O'zbekiston xalq shoiri, Davlat mukofoti sohibi
 ━━━━━━━━━━━━━━━━━━━━━
 
-G'afur G'ulom (to'liq ismi: G'afur G'ulom G'ulomov) — o'zbek sovet adabiyotining yirik vakili, shoir, yozuvchi, dramaturg va tarjimon.
+G'afur G'ulom (to'liq ismi: G'afur G'ulomovich G'ulomov) — o'zbek sovet adabiyotining yirik vakili, shoir, yozuvchi, dramaturg va tarjimon.
 
 *Hayoti:*
-Toshkentda hunarmand oilasida tug'ilgan. Erta yoshidan yetim qolgan — otasi 1910-yilda, onasi 1917-yilda vafot etgan. Bu og'ir sinovlar uning "Shum bola" asarida yorqin aks etgan.
-
+Gʻafur Gʻulomovich Gʻulomov 1903-yil 10-mayda Toshkentda kambagʻal oilada tugʻilgan. Uning otasi, Gʻulom Mirza Orif, rus tilini bilgan, sheʼr mutolaasiga ishtiyoqi baland boʻlgan va oʻzi ham sheʼrlar yozgan. U Gʻafur Gʻulom toʻqqiz yoshga toʻlganda vafot etgan.
+Gʻafur Gʻulom dastlab "eski maktab" deb ataladigan diniy maktabda tahsil oldi, keyinchalik esa Turkistondagi tub yerli xalqlar uchun moʻljallangan boshlangʻich rus-tuzem maktabiga oʻqishga kirdi. Oʻqituvchilar tayyorlash dasturini tamomlagach, zamonaviy maktabda dars bera boshladi.
+1923-yilda u mehribonlik uyining oʻquv boʻlimi mudiri etib tayinlandi. Shu davrda Gʻafur Gʻulom "Kambagʻal dehqon", "Qizil Oʻzbekiston" va "Sharq haqiqati" kabi turli nashrlarning tahririyatlarida ham faoliyat yurita boshladi. Tahririyatlarda ishlash unga oddiy fuqarolar hayoti bilan yaqindan tanishish imkoniyatini berdi.
 *Ijodi:*
 She'riyat, nashr, dramaturgiya va tarjima sohalarda faoliyat ko'rsatgan. Uning ijodi o'zbek adabiyotida yangi sahifa ochdi.
 
 *Asosiy asarlari:*
 📖 Shum bola (avtobiografik qissa)
-📖 Mening o'g'rigina bolam
-📖 Ko'cha bolasi
-📖 Sariq devlar
-📖 Navoiy (roman)
-📖 Yodgor (she'riy to'plam)
+📖 Mening o'g'rigina bolam hikoyasi
+📖 Netay qissasi
+📖 Yodgor qissasi
+📖 Sen yetim emassan sheʻri
+
 
 *Mukofotlari:*
-🏆 Lenin ordeni (2 marta)
-🏆 Qizil Mehnat Bayrog'i ordeni
-🏆 Stalin mukofoti (1946)
-🏆 O'zbekiston Davlat mukofoti
+
+🏆 1-darajali Stalin mukofoti (1946)
+🏆 Lenin mukofoti (1970)
+🏆 O'zbekiston SSR xalq shoiri (1963-yil 9-may)
+🏆 Lenin ordeni (1950-yil 16-yanvar, 1957-yil 11-yanvar)
+🏆 Mehnat Qizil Bayroq ordeni (1939-yil 31-yanvar, 1951-yil 6-dekabr, 1963-yil 9-may)
+🏆 "Hurmat belgisi" ordeni (1944-yil 25-dekabr)
+🏆 "Buyuk xizmatlari uchun" ordeni (2000-yil 25-avgust)
 """
 
 POEMS_INFO = """
@@ -42,15 +47,11 @@ G'afur G'ulom o'zbek she'riyatining eng yorqin siymolaridan biri. Uning she'rlar
 
 🌟 *"Sen yetim emassan"* — Urush yillarida yetim bolalarga bag'ishlangan buyuk she'r
 
-🌟 *"Asrlar mening ota-bobolarim"* — Tarixiy mavzudagi ulug'vor asar
+🌟 *"Vaqt"* — Har bir lahzaning qadrini anglashda muhim
 
-🌟 *"Mundoq qarasa"* — Hayotga falsafiy munosabat
+🌟 *"Sogʻinish"* — Urushga ketgan oʻgʻliga bagʻishlanadi.
 
-🌟 *"Toshkentim"* — Ona shahriga muhabbat
-
-🌟 *"Yoshlik"* — Yoshlik davri haqida lirik she'r
-
-🌟 *"Mard o'g'lon"* — Mardlik va jasurlik haqida
+🌟 *"Kuzatish"* — Urushga ketgan oʻgʻriga bagʻishlab yozilgan
 
 *She'riy uslubi:*
 G'afur G'ulom she'rlarida xalq og'zaki ijodi an'analari va zamonaviy adabiy uslublar uyg'un birlashgan. U aruz va barmoq vaznlarini mohirona qo'llagan.
@@ -63,17 +64,12 @@ G'afur G'ulom nasrda ham ajoyib asarlar yaratgan. Uning hikoyalari hayotiy, ta's
 
 *Mashhur hikoyalari:*
 
-📌 *"Yodgor"* — Urush davrining og'ir kunlari haqida
+📌 *"Mening oʻgʻrigina bolam"* — Urush davrining og'ir kunlari haqida
 
-📌 *"Maishat"* — Oddiy insonlar hayotidan lavhalar
+📌 *"Afandi oʻlmaydigan boʻldi"* — Kulgi orqali achchiq haqiqatlarni anglatadi
 
-📌 *"Telefon"* — Hajviy hikoya
+📌 *"Chorasi koʻrildi"* — Davrning byurokratik tizimini yoritadi va insonlarning sodda ekanligiga ishora qiladi
 
-📌 *"Ko'chada"* — Toshkent ko'chalarida hayot
-
-📌 *"Ikki do'st"* — Do'stlik va sadoqat haqida
-
-📌 *"Muhabbat"* — Sevgi va munosabatlar
 
 *Hikoyachilik uslubi:*
 Aniq tasvirlar, jonli dialoglar, hazil-mutoyiba bilan aralashgan samimiy til — G'afur G'ulom prozasining o'ziga xos xususiyatlari.
