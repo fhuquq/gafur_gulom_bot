@@ -41,22 +41,77 @@ def load_texts() -> dict:
     _cache = result
     return result
 
-def search_texts(query: str, max_results: int = 5) -> list:
+def search_texts(query: str, max_results: int = 3) -> list:
     texts = load_texts()
     if not texts:
         return []
+    
+    # Savol belgisini olib tashlash
+    query = query.strip().rstrip("?").rstrip("؟")
     words = [w for w in re.findall(r'\w+', query.lower()) if len(w) > 2]
     if not words:
         return []
+    
     results = []
     for title, content in texts.items():
-        paragraphs = [p.strip() for p in content.split('\n') if len(p.strip()) > 30]
+        paragraphs = [p.strip() for p in content.split('\n') if len(p.strip()) > 40]
         for para in paragraphs:
-            score = sum(1 for w in words if w in para.lower())
-            if score > 0:
+            para_lower = para.lower()
+            # Har bir so'z nechta marta uchraydi — og'irlik berish
+            score = 0
+            for w in words:
+                count = para_lower.count(w)
+                score += count * (2 if len(w) > 4 else 1)  # Uzun so'zlar muhimroq
+            
+            # Faqat aniq mos kelganlarni olish
+            if score >= len(words):  # Barcha so'zlar bo'lishi kerak
                 results.append((score, title, para))
+    
+    # Agar hamma so'z bo'lmasa, kamida bitta uzun so'z bo'lsa
+    if not results:
+        long_words = [w for w in words if len(w) > 3]
+        for title, content in texts.items():
+            paragraphs = [p.strip() for p in content.split('\n') if len(p.strip()) > 40]
+            for para in paragraphs:
+                para_lower = para.lower()
+                score = sum(para_lower.count(w) * 2 for w in long_words)
+                if score > 0:
+                    results.append((score, title, para))
+    
     results.sort(key=lambda x: x[0], reverse=True)
-    return results[:max_results]
+    # Takroriy paragraflarni olib tashlash
+    seen = set()
+    unique = []
+    for score, title, para in results:
+        key = para[:50]
+        if key not in seen:
+            seen.add(key)
+            unique.append((score, title, para))
+    
+    return unique[:max_results]
+
+def format_answer(query: str, results: list) -> str:
+    """Natijalarni aniq va chiroyli formatlash"""
+    if not results:
+        return (
+            f"❌ *'{query}'* haqida ma'lumot topilmadi.\n\n"
+            "💡 Boshqa so'z bilan sinab ko'ring:\n"
+            "• `tug'ilgan yili`\n"
+            "• `she'rlari`\n"
+            "• `Shum bola`"
+        )
+    
+    # Bitta natija bo'lsa — to'liq javob
+    if len(results) == 1:
+        _, title, para = results[0]
+        return f"📖 *{title}*\n\n{para}\n\n_Manba: {title}_"
+    
+    # Ko'p natija — ro'yxat
+    response = f"📚 *'{query}'* haqida:\n\n"
+    for i, (_, title, para) in enumerate(results, 1):
+        short = para[:300] + "..." if len(para) > 300 else para
+        response += f"*{i}.* {short}\n\n{'─'*15}\n\n"
+    return response
 
 @router.message(F.text == "🔍 Qidirish")
 async def start_search(message: Message, state: FSMContext):
@@ -93,26 +148,17 @@ async def do_search(message: Message):
         return
 
     searching_msg = await message.answer("🔍 Qidiryapman...")
-    results = search_texts(query, max_results=5)
+    results = search_texts(query, max_results=3)
     await searching_msg.delete()
 
-    if not results:
-        await message.answer(
-            f"❌ *'{query}'* bo'yicha hech narsa topilmadi.\n\n"
-            "💡 Boshqa so'z bilan sinab ko'ring.",
-            parse_mode="Markdown"
-        )
-        return
-
-    response = f"✅ *'{query}'* bo'yicha *{len(results)} ta* natija:\n\n"
-    for i, (score, title, para) in enumerate(results, 1):
-        short = para[:350] + "..." if len(para) > 350 else para
-        response += f"*{i}. 📌 {title}*\n{short}\n\n{'─'*20}\n\n"
-    response += "💬 _Yangi so'z yozing yoki /stop bosing_"
+    response = format_answer(query, results)
 
     if len(response) > 4096:
         chunks = [response[i:i+4000] for i in range(0, len(response), 4000)]
         for chunk in chunks:
             await message.answer(chunk, parse_mode="Markdown")
     else:
-        await message.answer(response, parse_mode="Markdown")
+        await message.answer(
+            response + "\n\n💬 _Yangi so'z yozing yoki /stop bosing_",
+            parse_mode="Markdown"
+        )
