@@ -21,128 +21,16 @@ def load_json() -> dict:
             continue
     return {}
 
-def get_poems_from_json() -> list:
-    """JSON dan she'rlar ro'yxatini olish"""
-    data = load_json()
-    sherlar = data.get("ijodi", {}).get("she_riyati", {}).get("mashhur_she_rlar", [])
-    return sherlar
-
-def get_poem_content(poem: dict) -> str:
-    """She'r haqida to'liq ma'lumot"""
-    nom = poem.get("nom", "")
-    yil = poem.get("yil", "")
-    mavzu = poem.get("mavzu", "")
-    izoh = poem.get("izoh", "")
-    xarakter = poem.get("xarakter", "")
-    sabab = poem.get("sabab", "")
-    tasiri = poem.get("tasiri", "")
-
-    text = f"🌟 *{nom}*"
-    if yil:
-        text += f" ({yil})"
-    text += "\n_G'afur G'ulom_\n\n"
-    if mavzu:
-        text += f"📝 *Mavzusi:* {mavzu}\n\n"
-    if sabab:
-        text += f"💡 *Yozilish sababi:* {sabab}\n\n"
-    if izoh:
-        text += f"ℹ️ {izoh}\n\n"
-    if xarakter:
-        text += f"🎭 *Xarakteri:* {xarakter}\n\n"
-    if tasiri:
-        text += f"🌍 *Ta'siri:* {tasiri}\n\n"
-
-    # Qo'shimcha ma'lumotlar
-    extras = []
-    for key, val in poem.items():
-        if key not in ["nom", "yil", "mavzu", "izoh", "xarakter", "sabab", "tasiri", "nashr"] and val:
-            label = key.replace("_", " ").replace("bahosi", "bahosi").title()
-            extras.append(f"_{label}: {val}_")
-    if extras:
-        text += "\n".join(extras)
-
-    return text
-
-def build_poems_keyboard(sherlar: list) -> InlineKeyboardMarkup:
-    """She'rlar ro'yxatidan klaviatura yaratish"""
-    buttons = []
-    for i, sh in enumerate(sherlar[:20]):  # Max 20 ta
-        nom = sh.get("nom", f"She'r {i+1}")
-        # Nomni qisqartirish (30 belgi)
-        short_nom = nom[:30] + "..." if len(nom) > 30 else nom
-        buttons.append([InlineKeyboardButton(
-            text=f"📜 {short_nom}",
-            callback_data=f"poem_{i}"
-        )])
-    buttons.append([InlineKeyboardButton(text="🔙 Orqaga", callback_data="back_main")])
-    return InlineKeyboardMarkup(inline_keyboard=buttons)
-
 # ═══════════════════════════════════════
-# HANDLERS
+# SHE'RLAR — TO'LIQ MATNLAR
 # ═══════════════════════════════════════
 
-@router.message(F.text == "ℹ️ Tarjimayi hol")
-async def cmd_bio(message: Message):
-    data = load_json()
-    if data:
-        s = data.get("shaxs", {})
-        joy = s.get("tug_ilgan_joy", {})
-        unvonlar = "\n".join([f"• {u}" for u in s.get("unvonlar", [])])
-        mukofotlar = "\n".join([
-            f"• {m.get('nom','')} {m.get('yil','')}"
-            for m in s.get("mukofotlar", [])
-        ])
-        bio = (
-            f"👤 *G'AFUR G'ULOM*\n\n"
-            f"📛 *To'liq ismi:* {s.get('asl_ismi','')}\n"
-            f"📅 *Tug'ilgan:* {s.get('tug_ilgan_sana','')}\n"
-            f"📍 *Joy:* {joy.get('shahar','')}, {joy.get('mahalla','')}\n"
-            f"⚰️ *Vafot:* {s.get('vafot_sana','')} ({s.get('vafot_yoshi','')} yoshida)\n"
-            f"🏛️ *Dafn:* {s.get('dafn_etilgan','')}\n\n"
-            f"🏆 *Unvonlari:*\n{unvonlar}\n\n"
-            f"🎖️ *Mukofotlari:*\n{mukofotlar}"
-        )
-        await message.answer(bio, parse_mode="Markdown", reply_markup=main_menu())
-    else:
-        await message.answer(BIOGRAPHY, parse_mode="Markdown", reply_markup=main_menu())
+SHERLAR = {
+    "sen_yetim": {
+        "nomi": "SEN YETIM EMASSAN (1942)",
+        "matn": """(Ulug' Vatan urushining ota-onasiz qolgan go'daklarga)
 
-@router.message(F.text == "🎭 She'rlar")
-async def show_poems(message: Message):
-    sherlar = get_poems_from_json()
-    if sherlar:
-        keyboard = build_poems_keyboard(sherlar)
-        await message.answer(
-            f"🎭 *G'AFUR G'ULOM SHE'RLARI*\n\n"
-            f"Jami: *{len(sherlar)} ta* mashhur she'r\n"
-            f"She'r tanlang 👇",
-            reply_markup=keyboard,
-            parse_mode="Markdown"
-        )
-    else:
-        # JSON yo'q — standart menyu
-        keyboard = InlineKeyboardMarkup(inline_keyboard=[
-            [InlineKeyboardButton(text="📜 Sen yetim emassan", callback_data="poem_static_1")],
-            [InlineKeyboardButton(text="📜 Sog'inish", callback_data="poem_static_2")],
-            [InlineKeyboardButton(text="📜 Vaqt", callback_data="poem_static_3")],
-            [InlineKeyboardButton(text="📜 Men yahudiyman", callback_data="poem_static_4")],
-            [InlineKeyboardButton(text="🔙 Orqaga", callback_data="back_main")]
-        ])
-        await message.answer(
-            "🎭 *G'AFUR G'ULOM SHE'RLARI*\n\nShe'r tanlang 👇",
-            reply_markup=keyboard,
-            parse_mode="Markdown"
-        )
-
-@router.callback_query(F.data.startswith("poem_"))
-async def show_poem(callback: CallbackQuery):
-    data_part = callback.data[5:]  # "poem_" dan keyingi qism
-
-    if data_part.startswith("static_"):
-        # Statik she'rlar
-        static = {
-            "1": "🌟 *Sen yetim emassan* (1942)\n\n1942-yilda urush paytida yozilgan. Yetim bolalarga bag'ishlangan.
-            
-            Sen yetim emassan,
+Sen yetim emassan,
 Tinchlan, jigarim.
 Quyoshday mehribon
 Vataning-onang,
@@ -252,7 +140,7 @@ Gitler oqpadar
 Farzandning qadrini
 Qayerdan bilsin?
 Bir qo'ng'iz mo'ylovli,
-Baroq soch mal’un,
+Baroq soch mal'un,
 Jigar rang bir mundir
 Istagi uchun,
 Nahotki yerimiz
@@ -275,7 +163,7 @@ Sen kulayotibsan,
 Balki bu kulgi
 So'nggi oylar ichra
 birinchi chechak.
-La’li labingdagi
+La'li labingdagi
 G'uncha tabassum
 Albat toleingga
 Muhr bo'ladi
@@ -306,26 +194,405 @@ Zulm yanchilur,
 Jahonda bo'lurmiz
 Ozod, muzaffar.
 Sen yetim emassan,
-Mening Jigarim!",
-            "2": "🌟 *Sog'inish* (1942)\n\nO'g'lini frontga kuzatgan otaning dardi haqida.",
-            "3": "🌟 *Vaqt* (1945)\n\nVaqtning qadri va inson umri haqida falsafiy she'r.",
-            "4": "🌟 *Men yahudiyman* (1941)\n\nFashizmga qarshi, xalqlar do'stligi haqida.",
-        }
-        num = data_part.replace("static_", "")
-        text = static.get(num, "❌ Topilmadi")
-        await callback.message.answer(text, parse_mode="Markdown")
+Mening Jigarim!"""
+    },
+    "vaqt": {
+        "nomi": "VAQT",
+        "matn": """G'uncha ochilguncha o'tgan fursatni
+Kapalak umriga qiyos etgulik,
+Ba'zida bir nafas olg'ulik muddat —
+Ming yulduz so'nishi uchun yetgulik.
+
+Yashash soatining oltin kapgiri
+Har borib kelishi bir olam zamon.
+Koinot shu damda o'z kurrasidan
+Yasab chiqa olur yangidan jahon.
+
+Yarim soat ichida tug'ilib, o'sib,
+Yashab, umr ko'rib o'tguvchilar bor;
+Ko'z ochib yumguncha o'tgan dam — qimmat,
+Bir lahza mazmuni bir butun bahor.
+
+Bir onning bahosin o'lchamoq uchun
+Oltindan tarozu, olmosdan tosh oz.
+Nurlar qadami-la chopgan sekundning
+Barini tutolmas ay(yu)hannos ovoz.
+
+Yigit termiladi qizning ko'ziga,
+Kiprik suzilishi, mayin tabassum…
+Qo'sha qarimoqqa muhr bo'ladi
+Hayotda ikki lab qovushgan bir zum.
+
+Yashash darbozasi ostonasidan
+Zarhal kitob kabi ochilur olam,
+Tiriklik ko'rkidir mehnat, muhabbat,
+Fursatdir qilguvchi aziz, mukarram.
+
+Bebaho damlarning tirik joni biz,
+Har oni o'tmishning yuz yiliga teng.
+O'zbekning barhayot avlodlarimiz,
+Har nafas mazmuni fazolardan keng.
+
+Qatrada osmon aks etganidek
+Jahonday ma'nodor qorachig'imiz.
+G'olib asrimizga kuyoshdan mash'al,
+Zamon ko'rasining so'nmas cho'g'imiz.
+
+Zamona soati zang urar mudom,
+Minglab hodisalar minutlarga qayd,
+Qahramon tug'ildi, shahar olindi,
+Bir gigant qurildi sharafli bu payt.
+
+Reyxstag ustiga g'alaba tug'in
+Qadashda otilgan adolat o'qi —
+Yalt etgan umri-la barqaror qildi
+Basharning muqaddas, oliy huquqin.
+
+G'alaba amri-la, mag'lub nemisning
+Generali qo'l qo'ydi. Uch sekund faqat…
+Shu mal'un imzoda odamlar o'qir
+Million yil fashistning umriga lan'at.
+
+Aziz asrimizning aziz onlari
+Aziz odamlardan so'raydi qadrin.
+Fursat g'animatdir, shoh satrlar-la
+Bezamoq chog'idir umr daftarin.
+
+Shuhrat qoldirmoqqa Gerostratdek
+Diana ma'badin yoqmoq shart emas.
+Ko'plarning baxtiga o'zlikni jamlab,
+Shu ulug' binoga bir g'isht qo'ysak bas.
+
+Har lahza zamonlar umridek uzun,
+Asrlar taqdiri lahzalarda hal,
+Umrdan o'tajak har lahza uchun
+Qudratli qo'l bilan qo'yaylik haykal.
+
+Hayot sharobidan bir qultum yutay,
+Damlar g'animatdir, umrzoq soqiy.
+Quyosh-ku falakda kezib yuribdi,
+Umrimiz boqiydir, umrimiz boqiy."""
+    },
+    "soginish": {
+        "nomi": "SOG'INISH",
+        "matn": """Zo'r karvon yo'liada yetim bo'tadek,
+Intizor ko'zlarda halqa-halqa yosh.
+Eng kichik zarradan Yupitergacha
+O'zing murabbiysan, xabar ber, Quyosh!
+
+Uzilgan bir kiprik abad yo'qolmas,
+Shunchalar mustahkam xonai xurshid.
+Bugun sabza bo'ldi qishdagi nafas,
+Hozir qonda kezar ertagi umid.
+
+Xoki anjir tugab, qovun g'arq pishgan
+Baxtli tong otar chog' uni kuzatdim,
+Bir mal'un gulshanga qadam qo'ymishkan,
+Joni bir jondoshlar qolarmidi jim!
+
+Unda yetuk edi meros mard g'urur,
+Ostonani o'pib, qasamyod qildi.
+Ukalarin erkalab, o'zimday mag'rur,
+Ya'ni obod uyimni u dilshod qildi…
+
+Iblisning g'arazi bo'lgan bu urush
+Albatta, yetadi o'zin boshiga.
+O'g'lim omon kelar, g'olib, muzaffar,
+Gard ham qo'ndirmasdan qora qoshiga.
+
+Ne qilsa otamen, meros hissiyot…
+Jondan sog'inishga uning haqqi bor,
+Kutaman, uzoqdan ko'rinsa bir ot,
+Kelayapti, deyman ko'rinsa g'ubor.
+
+Bahor novdasida bo'rtgan har kurtak
+Sog'ingan ko'ngilga berar tasalli.
+Ko'chatlar qomatin eslatganidek,
+Nafasin ufurar tong otar yeli.
+
+Kechqurun osh suzsak bir nasiba kam,
+Qo'msayman birovni — allakimimni,
+Doimo umidim bardam bo'lsa ham,
+Ba'zan vasvasalar bosar dilimni.
+
+Balki bir g'alat o'q yo xavfu xatar
+Xazinai umrimdan yo'qotdi olmos…
+Yo'q, u o'lmas, qadami olam yaratar,
+Hayotiy bu olam sizu bizga xos.
+
+Tong otar chogida juda sog'inib,
+Bedil o'qir edim, chikdi oftob.
+Loyqa xayolotlar chashmaday tindi,
+Pok-pokiza yurak bir qatra simob.
+
+O'rog'u gulqaychi, istak ko'tarib,
+Hovrimni bosishga boqqa jo'nadim.
+Hasharchi qo'shni qiz — uning sevgani,
+Ma'yus bosar edi orqamdan odim.
+
+Bog'da sarvinozim yo'q edi garchand,
+Ko'makchim arg'uvon yoring Nafisa,
+Seni sog'inganda qildim gul payvand —
+Bu bahordan hayot olardi bo'sa.
+
+Dur bo'lib taqilur yoring bo'yniga,
+Sadafday ko'zimda, behuda bu yosh.
+Ikkoving ikki yosh, labing labiga
+Qo'yar, vasvasamdan kuladi quyosh.
+
+Asaldan ajragan mumday sarg'ayib,
+Ini yo'q aridek to'zg'iganim yo'q.
+Ulug' e'tiqodda o'laman qarib,
+Abaddir mendagi padariy huquq.
+
+Sizlarni keldi, deb eshitgan kuni —
+O'zing to'qib ketgan katta savatda
+To'latib shaftoli uzib chiqaman,
+G'alaba kunlari yaqin, albatta.
+
+Yayov, ko'ksim ochiq, boshda shaftolu,
+Xuddi mo'ylabingdek mayin tuki bor,
+Har bitta shaftolu misoli kulgu,
+Shafaqday nim pushti, sarin, beg'ubor.
+
+Suyganing labida reza ter kabi
+Unda titrab turar sabuhiy shabnam.
+Munchalik mazani topa olmaydi
+Uyquda tamshangan chaqaloqlar ham.
+
+Yo o'g'lim, jonginang salomat bo'lsin,
+O'z bog'ing, o'z mevang, danagin saqla.
+Shu meros bog'ingni o'z qo'lingga ol,
+Menga topshirilgan merosiy haq-la.
+
+Bog'da tovus kabi xiromon bo'lib,
+Umid danagini birga ekingiz,
+G'olib kelajakni sayr qilaylik
+Mushfiq onaginang bilan ikkimiz."""
+    },
+    "yahudiy": {
+        "nomi": "MEN YAHUDIY",
+        "matn": """(Berlindan berilgan bir radio eshittirishiga javob)
+
+I
+Men yahudiyman!
+Nomimni tilingga olma,
+e, olchoq!
+Kimligimni eng katta
+buvingdan so'ra.
+Bobolaring
+boshiga shox taqib yurib,
+Bilmasdan
+tuz nima,
+o't nima,
+lungi...
+Va Nibelungi,
+Vahsat masjidida
+gotik naqshlar
+Hali sodda
+va hali bo'lganda g'o'ra;
+Asriy aqidada momaqaldiroq
+Yarataroq
+Bir xudo bo'lib,
+tavrot yozgan yahudiy,
+men yahudiyman.
+Eh-he...
+Bilolsayding
+qancha mashaqqat,
+G'urbatda kezganman
+bilonihoya...
+Uzoqbir umrki,
+doim darbadar
+Aqlini orqalab olgan
+bir karvon...
+Fir'avnlar quvlarkan,
+Nilninglabida
+O'z zehnim, fikrimning
+g'arib mardudi,
+men yahudiyman!
+Nega so'ylamasdan
+turmokdasan tin,
+E, Baytulmuqaddas,
+sen bergal xabar,
+Yig'i devorlari
+ko'hna Falastin...
+Besh ming yil ilgari,
+chorak asr oldin,
+Tarix betlarida
+javrab kelguvchi,
+O'zi soqov
+kdp'ai Bobil singari,
+Aytib kelganman:
+Men ham odamman!
+Kderda,
+qaydadir,
+Ayting, fir'avnlar,
+Shu tuproq zaminda
+mening vatanim?
+Yoinki,
+kamolot — tuhmat bo'larak
+Ko'milsinmi muallaq
+osmonda tanim?
+Jim!
+Fir'avn jim, xoqon jim!
+Paygambarlar,
+sulaymonlar jim.
+Bir xabar keltirmas,
+umid hududi,
+Men yahudiyman...
+
+II
+Men yahudiyman!
+Nomimni tilingga olma,
+e olchoq!
+Beda tamaida
+bo'ynini cho'zib,
+Boshi jodi ichra qolgan
+eshakday
+Manfur, chinqiroq
+Ovozingni radiodan
+hamma eshitdi.
+"...Unday yahudiy,
+bunday yahudiy..."
+Bali, yahudiy
+Men yahudiyman...
+Inson qoni aralash
+millionlar karra
+Va mening qonim ham
+xalqgtardan zarra.
+"...Irqu dinu millat..."
+Tag'in nimadir?
+Bilsangedi, bularningbarisin
+bizda;
+Sen itdan —
+to'ngizni ajratish uchun
+Baytariy ilmida
+bobi zammadir.
+Inson irqidanman,
+inson millati,
+Menda yo'q afyunning pinaklaridan
+yaralgan dinlarning
+zarra illati.
+Shu tuproq zamindir
+mening vatanim.
+Tug'ilish, yashayish,
+mehnatva nasl,
+Muhabbat ham g'azab...
+Insonda ne xislat
+bor bo'lsa mavjud;
+Bariga qobil,
+barchasiga bop.
+Shu tuproq zaminda
+qolajak tanim.
+Bilgil, e mardud,
+Bizlarmiz olamda
+xalqlar mas'udi,
+Men yahudiyman.
+Bu erkka intilgan
+xalqpar tuprog'i —
+Muqaddas, daxlsiz,
+buni bilib qo'y.
+Sen siflis tumshuqni
+suqmoqchi bo'lib,
+to'rt oyoqlab
+O'rningdan qo'zg'algan chog'i
+Zaharli nayzaga aylanib ketdi
+Bizning badandagi
+har bir tola mo'y.
+Qo'zg'aldi butun xalq,
+RUs,
+ukrain,
+o'zbek,
+yahudiy;
+Ikki yuz millionli
+yuz ellik millat,
+Uzoq falsafaning
+hech hojati yo'q;
+Zamin tarbuzidan
+fashizm — illat
+Yo'qolur
+juda tez,
+mutlaq abadiy.
+Shunda sening
+murdor taning bir umr
+bo'lur jahannam,
+fir'avnlar barham,
+G'oliblar safida
+turarak men ham.
+Ya'ni sodda formula:
+yahudiy - odam.
+Mening kimligimni olam olqishlar.
+Ko'zimda baxtimning
+quyosh - surudi,
+men yahudiyman"""
+    }
+}
+
+POEMS_KEYBOARD = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text="📜 Sen yetim emassan (1942)", callback_data="sher_sen_yetim")],
+    [InlineKeyboardButton(text="📜 Vaqt (1945)", callback_data="sher_vaqt")],
+    [InlineKeyboardButton(text="📜 Sog'inish (1942)", callback_data="sher_soginish")],
+    [InlineKeyboardButton(text="📜 Men yahudiy (1941)", callback_data="sher_yahudiy")],
+    [InlineKeyboardButton(text="🔙 Orqaga", callback_data="back_main")]
+])
+
+# ═══════════════════════════════════════
+# HANDLERS
+# ═══════════════════════════════════════
+
+@router.message(F.text == "ℹ️ Tarjimayi hol")
+async def cmd_bio(message: Message):
+    data = load_json()
+    if data:
+        s = data.get("shaxs", {})
+        joy = s.get("tug_ilgan_joy", {})
+        unvonlar = "\n".join([f"• {u}" for u in s.get("unvonlar", [])])
+        mukofotlar = "\n".join([
+            f"• {m.get('nom', '')} {m.get('yil', '')}"
+            for m in s.get("mukofotlar", [])
+        ])
+        bio = (
+            f"👤 *G'AFUR G'ULOM*\n\n"
+            f"📛 *To'liq ismi:* {s.get('asl_ismi', '')}\n"
+            f"📅 *Tug'ilgan:* {s.get('tug_ilgan_sana', '')}\n"
+            f"📍 *Joy:* {joy.get('shahar', '')}, {joy.get('mahalla', '')}\n"
+            f"⚰️ *Vafot:* {s.get('vafot_sana', '')} ({s.get('vafot_yoshi', '')} yoshida)\n"
+            f"🏛️ *Dafn:* {s.get('dafn_etilgan', '')}\n\n"
+            f"🏆 *Unvonlari:*\n{unvonlar}\n\n"
+            f"🎖️ *Mukofotlari:*\n{mukofotlar}"
+        )
+        await message.answer(bio, parse_mode="Markdown", reply_markup=main_menu())
     else:
-        # JSON dan
-        try:
-            idx = int(data_part)
-            sherlar = get_poems_from_json()
-            if 0 <= idx < len(sherlar):
-                text = get_poem_content(sherlar[idx])
-                await callback.message.answer(text, parse_mode="Markdown")
-            else:
-                await callback.message.answer("❌ She'r topilmadi.")
-        except (ValueError, IndexError):
-            await callback.message.answer("❌ Xato yuz berdi.")
+        await message.answer(BIOGRAPHY, parse_mode="Markdown", reply_markup=main_menu())
+
+@router.message(F.text == "🎭 She'rlar")
+async def show_poems(message: Message):
+    await message.answer(
+        "🎭 *G'AFUR G'ULOM SHE'RLARI*\n\n"
+        "Jami: *4 ta* to'liq she'r mavjud\n"
+        "She'r tanlang 👇",
+        reply_markup=POEMS_KEYBOARD,
+        parse_mode="Markdown"
+    )
+
+@router.callback_query(F.data.startswith("sher_"))
+async def show_sher(callback: CallbackQuery):
+    key = callback.data[5:]
+    sher = SHERLAR.get(key)
+    if not sher:
+        await callback.answer("Topilmadi!", show_alert=True)
+        return
+
+    header = f"📜 *{sher['nomi']}*\n_G'afur G'ulom_\n\n"
+    full_text = header + sher["matn"]
+
+    # 4096 belgidan uzun bo'lsa bo'laklarga bo'lish
+    if len(full_text) > 4096:
+        chunks = [full_text[i:i+4000] for i in range(0, len(full_text), 4000)]
+        for chunk in chunks:
+            await callback.message.answer(chunk, parse_mode="Markdown")
+    else:
+        await callback.message.answer(full_text, parse_mode="Markdown")
 
     await callback.answer()
 
@@ -343,7 +610,7 @@ async def handle_general(message: Message):
     if message.text in skip:
         return
     await message.answer(
-        "💡 Menyudan tanlang yoki *🔍 Qidirish* tugmasini bosing.",
+        "💡 Menyudan tanlang:",
         parse_mode="Markdown",
         reply_markup=main_menu()
     )
