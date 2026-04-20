@@ -7,7 +7,7 @@ BIOGRAPHY = """
 📅 *Tug'ilgan sana:* 1903-yil 10-may
 📍 *Tug'ilgan joy:* Toshkent shahri
 ⚰️ *Vafot etgan:* 1966-yil 10-iyul
-🎖️ *Unvonlari:* O'zbekiston xalq shoiri, Davlat mukofoti sohibi
+🎖️ *Unvonlari:* O'zbekiston xalq shoiri, Buyuk xizmatlari uchun ordeni sohibi
 ━━━━━━━━━━━━━━━━━━━━━
 
 G'afur G'ulom (to'liq ismi: G'afur G'ulomovich G'ulomov) — o'zbek sovet adabiyotining yirik vakili, shoir, yozuvchi, dramaturg va tarjimon.
@@ -76,43 +76,16 @@ Aniq tasvirlar, jonli dialoglar, hazil-mutoyiba bilan aralashgan samimiy til —
 """
 
 NOVELS_INFO = """
-🎭 *G'AFUR G'ULOMNING ROMAN VA QISSALARI*
+🎭 *G'AFUR G'ULOMNING QISSALARI*
 
 📗 *"SHUM BOLA"* (1936)
-Yozuvchining eng mashhur asari — avtobiografik qissa. Toshkentda 1900-1910-yillarda o'tkazilgan bolalik davri haqida. Asar hazilomuz, samimiy til bilan yozilgan bo'lib, o'zbek adabiyotining durdonalaridan biri hisoblanadi.
+“Shum bola” qissasidagi rivoyatga o‘xshash voqealardan ayrimlari xalq ichidan olingan bo‘lsa, ko‘plari Gʻafur Gʻulomning o‘z to‘qimalari, improvizatsiyalari ekaniga shubha yo‘q, albatta.
+“Shum bola” qissasining bosh qahramoni gohida “qush uchsa qanoti, odam yursa oyog‘i kuyadigan” ertaknamo manzillardan o‘tadi. Qissada xalq og‘zaki ijodi­ning turli janrlari, jumladan, maqollardan ham namunalar keladi. “Semizlikni qo‘y ko‘tarar”, “Bir tovuqqa ham don kerak, ham suv kerak”, “Maslahatli to‘n tor kelmas”, “Sheriklik oshni it ichmas”, “El og‘ziga elak tutib bo‘lmaydi”, “Oyni etak bilan yopib bo‘lmaydi” kabilar fikrimizga misol bo‘ladi. Maqollar qissaning turli epizodlari­da har xil vaziyatlarda turli qahramonlar tilidan aytiladi. Ayniqsa, har gapga “Yaxshi buzoq ikki onani emibdi” kabi bir maqol qo‘shadigan Hoji bobo musofirlik nima ekanini yaxshi biladi; shu bois Shum bolaga “Kishi musofir bo‘lmaguncha, musul­mon bo‘lmaydi”, deya o‘git beradi.  
 
-📘 *"MENING O'G'RIGINA BOLAM"* (1963)
-Bolalar tarbiyasi va ota-ona muhabbati haqidagi qissa.
+📘 *"YODGOR"* (1963)
+G‘afur G‘ulomning insoniylikni ulug‘lovchi asarlaridan yana biri “Yodgor” qissasidir. Qissa yumoristik janrda bo‘lib, bosh qahramon tilidan hikoya qilinadi. Yozuvchi, asarda o‘sha paytdayoq muhabbat erki masalasini ko‘tarib chiqib, qoloq psixologiya, jaholat inson boshiga og‘ir kulfatlar olib kelishi mumkinligini ko‘rsatib beradi. Hazil-mutoyiba va ertaknamo yo‘sinda yozilgan bu asar zamirida g‘amgin hikoya, fojiali taqdir bor. G‘afur G‘ulom jahon adabiyotida hozirgi vaqtlarda keng qo‘llanilayotgan tasvir usulini o‘sha vaqtdayoq ishga sola olgan. Ya’ni biror sodir bo‘lgan voqeaga odamlarning munosabatini ko‘rsatish, ularni sinov chig‘irig‘idan o‘tkazish orqali aslida kimligini, ruhiy olamini, ma’naviyatini ochib berish usulini qo‘llagan.
 
-📙 *"SARIQ DEVLAR"* (1958)
-Sobiq mustamlakachilik zamoniga bag'ishlangan roman.
-
-📕 *"NAVOIY"* (1944)
-Buyuk o'zbek shoiri Alisher Navoiy hayotiga bag'ishlangan tarixiy roman.
-
-📓 *"KO'CHA BOLASI"* 
-Toshkent ko'chalarida o'sayotgan bola haqidagi qissa.
 """
-
-DRAMA_INFO = """
-🎬 *G'AFUR G'ULOMNING DRAMATIK ASARLARI*
-
-G'afur G'ulom teatr uchun ham bir qancha asarlar yaratgan.
-
-*Asosiy pyesalari:*
-
-🎪 *"Maysaraning ishi"* — Kulgili komediya
-
-🎪 *"Ikki kommunist"* — Dramatik asar
-
-🎪 *"Yig'lamasang bo'lmaydi"* — Kulgili asar
-
-🎪 *"Undovchi"* — Dramatik kompozitsiya
-
-*Tarjimonlik faoliyati:*
-G'afur G'ulom Pushkin, Lermontov, Shekspir, Gyote asarlarini o'zbek tiliga mohirona tarjima qilgan.
-"""
-
 SYSTEM_PROMPT = """Siz G'afur G'ulom haqida ixtisoslashgan AI yordamchisisiz. Siz faqat O'ZBEK TILIDA javob berasiz. Hech qachon boshqa tilda javob bermaysiz.
 
 ═══════════════════════════════════════
@@ -120,28 +93,27 @@ G'AFUR G'ULOM — TO'LIQ BIOGRAFIYA
 ═══════════════════════════════════════
 
 SHAXSIY MA'LUMOTLAR:
-• To'liq ismi: G'afur G'ulom G'ulomov
+• To'liq ismi: G'afur G'ulomovich G'ulomov
 • Taxallusi: G'afur G'ulom
 • Tug'ilgan sana: 1903-yil 10-may
-• Tug'ilgan joy: Toshkent shahri, Eski shahar mahallasi
+• Tug'ilgan joy: Toshkent shahri, Qoʻrgontegi mahallasi
 • Vafot etgan: 1966-yil 10-iyul, Toshkent
 • Millati: O'zbek
 • Kasbi: Shoir, yozuvchi, dramaturg, tarjimon, publitsist
 
 HAYOT YO'LI:
-G'afur G'ulom Toshkentda hunarmand oilasida tug'ildi. Otasi G'ulom Zafarovich duradgor bo'lgan. 1910-yilda otasi, 1917-yilda onasi vafot etgan — shu tariqa u erta yetim qoldi. Bu og'ir bolalik davri uning "Shum bola" asarida yorqin aks etgan.
-
-Maktabda o'qigan, so'ng o'z-o'zini takomillashtirgan. 1923-yildan matbuotda ishlagan. "Mushtum", "Qizil O'zbekiston", "Pravda Vostoka" gazetalarida muharrir bo'lgan.
-
-1930-yillardan boshlab professional yozuvchi sifatida faoliyat ko'rsatgan. Ikkinchi Jahon urushi yillarida (1941-1945) vatanparvarlik ruhidagi asarlar yaratgan. Urush yillarida yetim qolgan bolalarga bag'ishlangan "Sen yetim emassan" she'ri butun xalqni larzaga keltirgan.
+Gʻafur Gʻulomovich Gʻulomov 1903-yil 10-mayda Toshkentda kambagʻal oilada tugʻilgan. Uning otasi, Gʻulom Mirza Orif, rus tilini bilgan, sheʼr mutolaasiga ishtiyoqi baland boʻlgan va oʻzi ham sheʼrlar yozgan. U Gʻafur Gʻulom toʻqqiz yoshga toʻlganda vafot etgan.
+Gʻafur Gʻulom dastlab "eski maktab" deb ataladigan diniy maktabda tahsil oldi, keyinchalik esa Turkistondagi tub yerli xalqlar uchun moʻljallangan boshlangʻich rus-tuzem maktabiga oʻqishga kirdi. Oʻqituvchilar tayyorlash dasturini tamomlagach, zamonaviy maktabda dars bera boshladi.
+1923-yilda u mehribonlik uyining oʻquv boʻlimi mudiri etib tayinlandi. Shu davrda Gʻafur Gʻulom "Kambagʻal dehqon", "Qizil Oʻzbekiston" va "Sharq haqiqati" kabi turli nashrlarning tahririyatlarida ham faoliyat yurita boshladi. Tahririyatlarda ishlash unga oddiy fuqarolar hayoti bilan yaqindan tanishish imkoniyatini berdi.
 
 MUKOFOT VA UNVONLARI:
-• O'zbekiston xalq shoiri (1943)
-• Lenin ordeni — 2 marta
-• Qizil Mehnat Bayrog'i ordeni — 3 marta
-• Stalin mukofoti I daraja (1946) — "Navoiy" romani uchun
-• O'zbekiston SSR Davlat mukofoti
-• O'zbekiston SSR Oliy Soveti deputati
+🏆 1-darajali Stalin mukofoti (1946)
+🏆 Lenin mukofoti (1970)
+🏆 O'zbekiston SSR xalq shoiri (1963-yil 9-may)
+🏆 Lenin ordeni (1950-yil 16-yanvar, 1957-yil 11-yanvar)
+🏆 Mehnat Qizil Bayroq ordeni (1939-yil 31-yanvar, 1951-yil 6-dekabr, 1963-yil 9-may)
+🏆 "Hurmat belgisi" ordeni (1944-yil 25-dekabr)
+🏆 "Buyuk xizmatlari uchun" ordeni (2000-yil 25-avgust)
 
 ═══════════════════════════════════════
 ASOSIY ASARLARI — BATAFSIL
@@ -159,16 +131,6 @@ Janr: Tarixiy roman
 Yozilgan yil: 1944, Ikkinchi Jahon urushi davrida
 Buyuk o'zbek shoiri va davlat arbobi Alisher Navoiy (1441-1501) hayotiga bag'ishlangan. Roman XV asrdagi Hirot shahrini, Temuriylar sulolasini, Navoiyning ijodiy va siyosiy faoliyatini tasvirlaydi. 1946-yilda Stalin mukofotiga sazovor bo'lgan.
 Mavzu: Navoiyning ijodi, do'stlik, siyosat, san'at va hokimiyat munosabatlari
-
-3. "SARIQ DEVLAR" (1958) — roman
-Janr: Roman
-Mustamlakachilik davri — Chor Rossiyasi hukmronligi ostidagi O'rta Osiyoni tasvirlaydi. "Sariq devlar" — mustamlakachi kuchlarning majoziy nomi.
-
-4. "MENING O'G'RIGINA BOLAM" (1963) — qissa
-Bolalar tarbiyasi va ota-ona muhabbati haqida.
-
-5. "KO'CHA BOLASI" — qissa
-Toshkent ko'chalarida o'sayotgan bola haqida.
 
 ═══════════════════════════════════════
 MASHHUR SHE'RLARI — TO'LIQ MATNLAR
