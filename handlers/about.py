@@ -1,133 +1,163 @@
+import os
+import re
 from aiogram import Router, F
-from aiogram.types import Message, CallbackQuery
+from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from keyboards import main_menu
 from data.gafur_data import POEMS_INFO, STORIES_INFO, BIOGRAPHY
-from handlers.ai_chat import ask_ai
 
 router = Router()
 
-FAMOUS_POEMS = {
-    "sen_yetim": {
-        "title": "🌟 Sen yetim emassan",
-        "text": (
-            "*\"SEN YETIM EMASSAN\"*\n"
-            "_G'afur G'ulom_\n\n"
-            "_(1942-yil, Urush davri she'ri)_\n\n"
-            "Bu she'r 1942-yilda Ikkinchi Jahon urushi paytida yozilgan. "
-            "Urushda ota-onasini yo'qotgan bolalarga bag'ishlangan bu she'r "
-            "o'zbek adabiyotining eng ta'sirchan asarlaridan biri hisoblanadi.\n\n"
-            "🤖 *She'r tahlili uchun 'AI bilan suhbat' bo'limiga o'ting.*"
-        )
-    },
-    "asrlar": {
-        "title": "🌟 Asrlar mening ota-bobolarim",
-        "text": (
-            "*\"ASRLAR MENING OTA-BOBOLARIM\"*\n"
-            "_G'afur G'ulom_\n\n"
-            "Bu she'rda shoir o'zbek xalqining boy tarixi va madaniyatiga murojaat qiladi. "
-            "O'tmish va bugungi kun o'rtasidagi bog'liqlik, ajdodlarga ehtirom — "
-            "asarning asosiy mavzulari.\n\n"
-            "🤖 *She'r tahlili uchun 'AI bilan suhbat' bo'limiga o'ting.*"
-        )
-    }
+BOOKS_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "media", "books")
+
+def load_texts() -> dict:
+    result = {}
+    if not os.path.exists(BOOKS_DIR):
+        return {}
+    for filename in sorted(os.listdir(BOOKS_DIR)):
+        if not filename.lower().endswith(".txt"):
+            continue
+        filepath = os.path.join(BOOKS_DIR, filename)
+        content = None
+        for enc in ["utf-8", "utf-8-sig", "cp1251", "cp1252", "latin-1"]:
+            try:
+                with open(filepath, "r", encoding=enc) as f:
+                    content = f.read().strip()
+                if content:
+                    break
+            except Exception:
+                continue
+        if content:
+            title = filename.replace(".txt", "").replace("_", " ").replace("-", " ").title()
+            result[title] = content
+    return result
+
+def search_texts(query: str, max_results: int = 4) -> list:
+    texts = load_texts()
+    if not texts:
+        return []
+    words = [w for w in re.findall(r'\w+', query.lower()) if len(w) > 2]
+    if not words:
+        return []
+    results = []
+    for title, content in texts.items():
+        paragraphs = [p.strip() for p in content.split('\n') if len(p.strip()) > 30]
+        for para in paragraphs:
+            score = sum(1 for w in words if w in para.lower())
+            if score > 0:
+                results.append((score, title, para))
+    results.sort(key=lambda x: x[0], reverse=True)
+    return results[:max_results]
+
+# She'rlar menyusi
+POEMS_KEYBOARD = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text="📜 Sen yetim emassan", callback_data="poem_1")],
+    [InlineKeyboardButton(text="📜 Asrlar mening ota-bobolarim", callback_data="poem_2")],
+    [InlineKeyboardButton(text="📜 Toshkentim", callback_data="poem_3")],
+    [InlineKeyboardButton(text="📜 Yoshlik", callback_data="poem_4")],
+    [InlineKeyboardButton(text="📜 O'zbekiston", callback_data="poem_5")],
+    [InlineKeyboardButton(text="🔙 Orqaga", callback_data="back_main")]
+])
+
+POEMS_CONTENT = {
+    "poem_1": (
+        "🌟 *SEN YETIM EMASSAN* (1942)\n"
+        "_G'afur G'ulom_\n\n"
+        "Bu she'r 1942-yilda Ikkinchi Jahon urushi paytida yozilgan.\n"
+        "Urushda otasini yo'qotgan bolalarga bag'ishlangan.\n\n"
+        "She'rning asosiy g'oyasi: urushda yetim qolgan bola yolg'iz emas,\n"
+        "butun xalq uning otasi. Umid va bardosh haqidagi buyuk asar.\n\n"
+        "📌 _To'liq matn TXT faylida mavjud. '🔍 Qidirish' orqali toping._"
+    ),
+    "poem_2": (
+        "🌟 *ASRLAR MENING OTA-BOBOLARIM*\n"
+        "_G'afur G'ulom_\n\n"
+        "O'zbek xalqining boy tarixi va ajdodlarga ehtiromga bag'ishlangan she'r.\n"
+        "Temur, Navoiy, Ulug'bek kabi buyuk ajdodlar ulug'lanadi.\n\n"
+        "📌 _To'liq matn TXT faylida mavjud. '🔍 Qidirish' orqali toping._"
+    ),
+    "poem_3": (
+        "🌟 *TOSHKENTIM*\n"
+        "_G'afur G'ulom_\n\n"
+        "Ona shahri Toshkentga muhabbat haqidagi lirik she'r.\n"
+        "Shoir Toshkentning go'zalligi, tarixi va kelajagi haqida yozgan.\n\n"
+        "📌 _To'liq matn TXT faylida mavjud. '🔍 Qidirish' orqali toping._"
+    ),
+    "poem_4": (
+        "🌟 *YOSHLIK*\n"
+        "_G'afur G'ulom_\n\n"
+        "Yoshlik davri, uning qadri va o'tkinchiligi haqidagi lirik she'r.\n\n"
+        "📌 _To'liq matn TXT faylida mavjud. '🔍 Qidirish' orqali toping._"
+    ),
+    "poem_5": (
+        "🌟 *O'ZBEKISTON*\n"
+        "_G'afur G'ulom_\n\n"
+        "Vatan — O'zbekistonga bag'ishlangan vatanparvarlik she'ri.\n\n"
+        "📌 _To'liq matn TXT faylida mavjud. '🔍 Qidirish' orqali toping._"
+    ),
 }
+
+@router.message(F.text == "ℹ️ Tarjimayi hol")
+async def cmd_bio(message: Message):
+    # Avval TXT dan qidirish, bo'lmasa standart
+    results = search_texts("tug'ilgan hayot ijod 1903", max_results=2)
+    if results:
+        txt_part = "\n\n".join([f"📌 _{para[:500]}_" for _, _, para in results])
+        await message.answer(
+            BIOGRAPHY + f"\n\n📖 *Manbadan:*\n{txt_part}",
+            parse_mode="Markdown",
+            reply_markup=main_menu()
+        )
+    else:
+        await message.answer(BIOGRAPHY, parse_mode="Markdown", reply_markup=main_menu())
 
 @router.message(F.text == "🎭 She'rlar")
 async def show_poems(message: Message):
-    from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-    
-    keyboard = InlineKeyboardMarkup(
-        inline_keyboard=[
-            [InlineKeyboardButton(text="📜 Sen yetim emassan", callback_data="poem_sen_yetim")],
-            [InlineKeyboardButton(text="📜 Asrlar mening ota-bobolarim", callback_data="poem_asrlar")],
-            [InlineKeyboardButton(text="📜 Toshkentim", callback_data="poem_toshkent")],
-            [InlineKeyboardButton(text="📜 Yoshlik", callback_data="poem_yoshlik")],
-            [InlineKeyboardButton(text="🤖 AI dan she'r tahlili so'rash", callback_data="poem_ai_analysis")],
-            [InlineKeyboardButton(text="🔙 Orqaga", callback_data="back_main")]
-        ]
-    )
-    
     await message.answer(
         "🎭 *G'AFUR G'ULOM SHE'RLARI*\n\n"
-        "She'rlar ro'yxatidan birini tanlang\n"
-        "yoki AI dan she'r tahlili so'rang:",
-        reply_markup=keyboard,
+        "She'r tanlang yoki '🔍 Qidirish' orqali she'r nomini yozing:",
+        reply_markup=POEMS_KEYBOARD,
         parse_mode="Markdown"
     )
 
 @router.callback_query(F.data.startswith("poem_"))
-async def handle_poem(callback: CallbackQuery):
-    poem_key = callback.data.replace("poem_", "")
-    
-    if poem_key == "ai_analysis":
-        await callback.message.answer(
-            "🤖 *She'r tahlili*\n\n"
-            "'AI bilan suhbat' tugmasini bosing va:\n"
-            "`Sen yetim emassan she'rini tahlil qil`\n"
-            "deb yozing!",
-            parse_mode="Markdown",
-            reply_markup=main_menu()
-        )
-        await callback.answer()
-        return
-    
-    if poem_key == "toshkent":
-        text = (
-            "*\"TOSHKENTIM\"*\n"
-            "_G'afur G'ulom_\n\n"
-            "Ona shahri Toshkentga bag'ishlangan lirik she'r. "
-            "Shoir Toshkentning go'zalligi, uning tarixi va kelajagi haqida samimiy his-tuyg'ularini bayon etadi.\n\n"
-            "🤖 *Batafsil tahlil uchun AI bilan suhbatlashing.*"
-        )
-    elif poem_key == "yoshlik":
-        text = (
-            "*\"YOSHLIK\"*\n"
-            "_G'afur G'ulom_\n\n"
-            "Yoshlik davri haqidagi lirik she'r. "
-            "Shoir yoshlik vaqtining qadri va uning o'tib ketishi haqida fikr yuritadi.\n\n"
-            "🤖 *Batafsil tahlil uchun AI bilan suhbatlashing.*"
-        )
-    elif poem_key in ["sen_yetim", "asrlar"]:
-        poem_data = FAMOUS_POEMS.get(poem_key)
-        text = poem_data["text"] if poem_data else "She'r topilmadi."
-    else:
-        text = "❌ Bu she'r hozircha mavjud emas."
-    
-    await callback.message.answer(text, parse_mode="Markdown")
+async def show_poem(callback: CallbackQuery):
+    content = POEMS_CONTENT.get(callback.data, "❌ Topilmadi")
+    # TXT dan ham qidirish
+    poem_name = content.split("*")[1] if "*" in content else ""
+    if poem_name:
+        results = search_texts(poem_name.lower(), max_results=2)
+        if results:
+            extra = "\n\n📖 *Manbadan topildi:*\n" + "\n\n".join([f"_{p[:400]}_" for _, _, p in results])
+            content += extra
+    await callback.message.answer(content, parse_mode="Markdown")
     await callback.answer()
 
-# Umumiy matn xabarlari — AI ga yo'naltirish (oxirgi handler)
+@router.callback_query(F.data == "back_main")
+async def back_main(callback: CallbackQuery):
+    await callback.message.answer("Asosiy menyu:", reply_markup=main_menu())
+    await callback.answer()
+
+# Umumiy matn xabarlar — qidiruvga yo'naltirish
 @router.message(F.text & ~F.text.startswith("/"))
-async def handle_general_text(message: Message):
-    """Oddiy matn xabarlarini AI ga yuborish"""
-    text = message.text.lower()
-    
-    # Maxsus kalit so'zlar bo'lmasa, AI ga yuborish
-    skip_words = [
-        "🤖 ai bilan suhbat", "📚 kitoblar", "🎧 audio hikoyalar",
-        "📖 asarlari haqida", "ℹ️ tarjimayi hol", "🎭 she'rlar", "❓ yordam"
+async def handle_general(message: Message):
+    skip = [
+        "📚 Kitoblar", "🎧 Audio hikoyalar", "📖 Asarlari haqida",
+        "ℹ️ Tarjimayi hol", "🎭 She'rlar", "❓ Yordam", "🔍 Qidirish"
     ]
-    
-    if message.text in skip_words:
+    if message.text in skip:
         return
-    
-    # AI ga yuborish
-    thinking_msg = await message.answer("🤔 O'ylamoqda...")
-    
-    try:
-        ai_response = await ask_ai(message.from_user.id, message.text)
-        await thinking_msg.delete()
-        
+
+    results = search_texts(message.text, max_results=3)
+    if results:
+        response = f"🔍 *'{message.text}'* bo'yicha topildi:\n\n"
+        for _, title, para in results:
+            short = para[:400] + "..." if len(para) > 400 else para
+            response += f"📌 *[{title}]*\n{short}\n\n─────────────\n\n"
+        await message.answer(response, parse_mode="Markdown", reply_markup=main_menu())
+    else:
         await message.answer(
-            f"🤖 *AI Javobi:*\n\n{ai_response}",
-            parse_mode="Markdown",
-            reply_markup=main_menu()
-        )
-    except Exception as e:
-        await thinking_msg.delete()
-        await message.answer(
-            "❌ Xato yuz berdi. Qayta urinib ko'ring.\n"
-            "Yoki *'AI bilan suhbat'* tugmasini bosing.",
+            "❓ Bu haqda ma'lumot topilmadi.\n\n"
+            "💡 *'🔍 Qidirish'* tugmasini bosib, kalit so'z yozing.",
             parse_mode="Markdown",
             reply_markup=main_menu()
         )
