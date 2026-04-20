@@ -181,6 +181,10 @@ def search_txt(query: str) -> list:
 
     results = []
     for title, content in txts.items():
+        # Vikipediya va umumiy tarix fayllarini o'tkazib yuborish
+        title_lower = title.lower()
+        if any(s in title_lower for s in ["vikipediya", "wikipedia", "hayoti ijodi", "hayot ijod", "fikrlar"]):
+            continue
         content_lower = content.lower()
         # To'liq ibora
         if query_lower in content_lower:
