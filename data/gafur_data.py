@@ -7,30 +7,35 @@ BIOGRAPHY = """
 📅 *Tug'ilgan sana:* 1903-yil 10-may
 📍 *Tug'ilgan joy:* Toshkent shahri
 ⚰️ *Vafot etgan:* 1966-yil 10-iyul
-🎖️ *Unvonlari:* O'zbekiston xalq shoiri, Davlat mukofoti sohibi
+🎖️ *Unvonlari:* O'zbekiston xalq shoiri, Buyuk xizmatlari uchun mukofoti sohibi
 ━━━━━━━━━━━━━━━━━━━━━
 
-G'afur G'ulom (to'liq ismi: G'afur G'ulom G'ulomov) — o'zbek sovet adabiyotining yirik vakili, shoir, yozuvchi, dramaturg va tarjimon.
+G'afur G'ulom (to'liq ismi: G'afur G'ulomovich G'ulomov) — o'zbek sovet adabiyotining yirik vakili, shoir, yozuvchi, dramaturg va tarjimon.
 
-*Hayoti:*
-Toshkentda hunarmand oilasida tug'ilgan. Erta yoshidan yetim qolgan — otasi 1910-yilda, onasi 1917-yilda vafot etgan. Bu og'ir sinovlar uning "Shum bola" asarida yorqin aks etgan.
+*HAYOTI:*
+Gʻafur Gʻulomovich Gʻulomov 1903-yil 10-mayda Toshkent shahrida kambagʻal oilada tugʻilgan. Uning otasi Gʻulom Mirza Orif rus tilini bilgan, she’riyatga qiziqqan va oʻzi ham she’rlar yozgan. Gʻafur Gʻulom endigina toʻqqiz yoshga toʻlganda, otasi vafot etgan.
+Gʻafur Gʻulom dastlab "eskicha" diniy maktabda, keyinchalik esa Turkistondagi mahalliy aholi uchun ochilgan boshlangʻich Rus-tuzem maktabida tahsil olgan. Oʻqituvchilar tayyorlash kursini bitirgach, zamonaviy maktabda dars bera boshlagan. 1923-yilda u bolalar uyida oʻquv boʻlimi mudiri etib tayinlangan. Shu bilan birga, Gʻafur Gʻulom "Kambagʻal dehqon", "Qizil Oʻzbekiston" va "Sharq haqiqati" kabi turli nashrlarning tahririyatlarida faoliyat yuritgan. Tahririyatlardagi bu ish jarayoni unga oddiy fuqarolar hayotini chuqurroq oʻrganish imkonini bergan.
 
-*Ijodi:*
-She'riyat, nashr, dramaturgiya va tarjima sohalarda faoliyat ko'rsatgan. Uning ijodi o'zbek adabiyotida yangi sahifa ochdi.
+*IJODI:*
+Gʻafur Gʻulomning ilk she’riy toʻplamlari — "Dinamo" va "Tirik qoʻshiqlar" mos ravishda 1931 va 1932-yillarda nashr etilgan. Bu kitoblarida u Turkiston xalqlarining eskirgan urf-odatlarini tanqid ostiga olgan hamda oddiy fuqarolarning fidokorona mehnatini ulugʻlagan. 1930-yillarda Gʻafur Gʻulom koʻplab hikoya, ocherk va hajviy maqolalaridan tashqari, "Netay", "Yodgor" va "Tirilgan murda" kabi nisbatan yirik qissalarini ham yozgan.
+Ikkinchi jahon urushi yillarida adib oʻz vaqti va mahoratini butunlay urush mavzusiga bagʻishladi. Uning "Sen yetim emassan", "Oltin medal", "Kuzatish", "Vaqt" va "Sogʻinish" kabi she’rlari oʻzbek xalqi orasida juda katta shuhrat qozondi.
 
-*Asosiy asarlari:*
-📖 Shum bola (avtobiografik qissa)
+*MASHHUR ASARLARI:*
+📖 Shum bola 
 📖 Mening o'g'rigina bolam
-📖 Ko'cha bolasi
-📖 Sariq devlar
-📖 Navoiy (roman)
-📖 Yodgor (she'riy to'plam)
+📖 Sen yetim emassan
+📖 Netay
+📖 Yodgor
+📖 Vaqt she'ri
 
-*Mukofotlari:*
-🏆 Lenin ordeni (2 marta)
-🏆 Qizil Mehnat Bayrog'i ordeni
-🏆 Stalin mukofoti (1946)
-🏆 O'zbekiston Davlat mukofoti
+*MUKOFOTLAR:*
+🥇 Birinchi darajali Stalin mukofoti (1946)
+🏆 Lenin mukofoti (1970)
+🌟 Oʻzbekiston SSR xalq shoiri (1963-yil 9-may)
+🎖 Lenin ordeni (1950-yil 16-yanvar va 1957-yil 11-yanvar)
+🛠 Mehnat Qizil Bayroq ordeni (1939-yil 31-yanvar, 1951-yil 6-dekabr va 1963-yil 9-may)
+🏅 "Hurmat belgisi" ordeni (1944-yil 25-dekabr)
+✨ "Buyuk xizmatlari uchun" ordeni (2000-yil 25-avgust)
 """
 
 POEMS_INFO = """
@@ -42,15 +47,15 @@ G'afur G'ulom o'zbek she'riyatining eng yorqin siymolaridan biri. Uning she'rlar
 
 🌟 *"Sen yetim emassan"* — Urush yillarida yetim bolalarga bag'ishlangan buyuk she'r
 
-🌟 *"Asrlar mening ota-bobolarim"* — Tarixiy mavzudagi ulug'vor asar
+🌟 *"Vaqt"* — Har lahazaning qadri qanchalik ekanligini yoritadi
 
-🌟 *"Mundoq qarasa"* — Hayotga falsafiy munosabat
+🌟 *"Kuzatish"* — Adib o'zining urushga ketgan o'g'liga bag'ishlab yozgan she'ri
 
-🌟 *"Toshkentim"* — Ona shahriga muhabbat
+🌟 *"Meh yahudiy"* — Urush davrida nemislarning yahudiylar qirg'iniga qarshiligini namoyon qilish uchun yozilgan she'r 
 
-🌟 *"Yoshlik"* — Yoshlik davri haqida lirik she'r
+🌟 *"Muharram"* — Adib o'zining rafiqasi Muharram opaning barcha fazilatlarini bir she'rda jamlagan
 
-🌟 *"Mard o'g'lon"* — Mardlik va jasurlik haqida
+_Ushbu she'rlarni adibning botda mavjud bo'lgan "Tanlangan asarlar" kitobidan o'qishingiz mumkin_
 
 *She'riy uslubi:*
 G'afur G'ulom she'rlarida xalq og'zaki ijodi an'analari va zamonaviy adabiy uslublar uyg'un birlashgan. U aruz va barmoq vaznlarini mohirona qo'llagan.
@@ -63,58 +68,42 @@ G'afur G'ulom nasrda ham ajoyib asarlar yaratgan. Uning hikoyalari hayotiy, ta's
 
 *Mashhur hikoyalari:*
 
-📌 *"Yodgor"* — Urush davrining og'ir kunlari haqida
+📌 *"Mening o'g'rigina bolam"* — Urush davrining og'ir kunlaridan hikoya qiladi
 
-📌 *"Maishat"* — Oddiy insonlar hayotidan lavhalar
+📌 *"Afandi o'lmaydigan bo'ldi"* — Kulgu orqali hayotning achchiq haqiqatlarini anglatadi
 
-📌 *"Telefon"* — Hajviy hikoya
+📌 *"Chorasi ko'rildi"* — Bu hikoyada ham hajv orqali adib davrining byurokrtaik tizimini, o'zbek xalqining naqadar soddadil ekanligini namoyon qilgan
 
-📌 *"Ko'chada"* — Toshkent ko'chalarida hayot
-
-📌 *"Ikki do'st"* — Do'stlik va sadoqat haqida
-
-📌 *"Muhabbat"* — Sevgi va munosabatlar
+📌 *"Farzandi solih"* — Tilab-tilab olingan bir farzandning hajviy sarguzashtlari xususida
 
 *Hikoyachilik uslubi:*
 Aniq tasvirlar, jonli dialoglar, hazil-mutoyiba bilan aralashgan samimiy til — G'afur G'ulom prozasining o'ziga xos xususiyatlari.
 """
 
 NOVELS_INFO = """
-🎭 *G'AFUR G'ULOMNING ROMAN VA QISSALARI*
+🎭 *G'AFUR G'ULOMNING QISSALARI*
 
 📗 *"SHUM BOLA"* (1936)
-Yozuvchining eng mashhur asari — avtobiografik qissa. Toshkentda 1900-1910-yillarda o'tkazilgan bolalik davri haqida. Asar hazilomuz, samimiy til bilan yozilgan bo'lib, o'zbek adabiyotining durdonalaridan biri hisoblanadi.
+Qissa oʻtkir hajviy asar boʻlib, haqiqiy voqealar va shaxslar taqdiriga asoslangan. Asar markazida yozuvchining hayotidan olingan koʻp faktlar turgan boʻlsa-da, u avtobiografik emas. Unda haqiqiy tarixiy faktlarga nisbatan badiiy toʻqima va fantaziya kuchli.
+Qissani F. Shayhutdinova (1968) hamda A. Naumov (1970) rus tiliga, V. Grimich (1991) ukrain tiliga tarjima qilgan. 1977-yilda asar asosida suratga olingan „Shum bola“ filmi ham oʻzbek, ham xorijiy film tanqidchilari tahsiniga sazovor boʻlgan.
+2023-yilda asar BBC nashri tomonidan barcha davrlarning eng yaxshi top-100 bolalar kitoblari reytingiga kiritildi. Shu yili Gʻafur Gʻulom tavalludining 120-yilligi munosabati bilan adib nomidagi nashriyot tomonidan qissaning yangi oʻzbekcha nashri chop etildi.
 
-📘 *"MENING O'G'RIGINA BOLAM"* (1963)
-Bolalar tarbiyasi va ota-ona muhabbati haqidagi qissa.
+Asar syujeti
 
-📙 *"SARIQ DEVLAR"* (1958)
-Sobiq mustamlakachilik zamoniga bag'ishlangan roman.
+Qissada shum bola — Qoravoy haqida hikoya qilinadi. Qoravoy uyidan ketib qolib, oʻzining topqirligi, zukkoligi va shoʻx-shaddodligi tufayli turli sarguzashtlarni boshidan kechiradi. Safari davomida u bir guruh oʻgʻriga, har bir gapga „innaykeyin?“ deb javob qaytaruvchi boyga va giyohvand mullalarga duch keladi.
 
-📕 *"NAVOIY"* (1944)
-Buyuk o'zbek shoiri Alisher Navoiy hayotiga bag'ishlangan tarixiy roman.
+📘 *"YODGOR"* (1936)
+Oʻzbek yozuvchisi Gʻafur Gʻulom qalamiga mansub ushbu qissa ilk bor 1936-yilda chop etilgan boʻlib, oʻtgan davr mobaynida bir necha marta qayta nashr qilingan. Asarni rus tiliga tarjimon L. Satserdotova mahorat bilan oʻgirgan.
 
-📓 *"KO'CHA BOLASI"* 
-Toshkent ko'chalarida o'sayotgan bola haqidagi qissa.
+Asarning mohiyati va qahramonlari:
+Qissada yangi davr kishisining shakllanishi va xarakterining rivojlanishi mahorat bilan tasvirlangan. Inson tarbiyasi, uning ma’naviy kamoloti va ijtimoiy qarashlari asar qahramonlari — Joʻra, Saodat va Mehrixon obrazlari yordamida chuqur ochib berilgan.
 """
 
 DRAMA_INFO = """
-🎬 *G'AFUR G'ULOMNING DRAMATIK ASARLARI*
+🎬 *G'AFUR G'ULOMNING TARJIMALARI*
+G‘afur G‘ulom Ro‘dakiyning “Qarilikdan shikoyat”, Shota Rustavelining “Yo‘lbars terisidagi pahlavon” dostonidan boblar, Sa’diyning “Guliston” asarining she’riy qismini, Jomiy va Foniy g‘azallarini, Bedilning ikki ruboiysini, shuningdek I.Krilov masallarini, A.Griboyedovning “Aqllilik balosi”dan parchani, Pushkinning talay she’r va poemalarini, T.Shevchenko, A.Tolstoy, A.Fet, A.Maykov, N.Nekrasov, Jambul va Sulaymon Stalskiy, A.Surkov, Lohutiy, I.Bexer, V.Mayakovskiy, I.Frenkel, L.Xyuz, A.Tvardovskiy, M.Tursunzoda, A.Kuleshov, K.Simonov she’rlarini, o‘nlab turli xalqlarning qo‘shiqlarini o‘zbekchalashtirdi.
 
-G'afur G'ulom teatr uchun ham bir qancha asarlar yaratgan.
-
-*Asosiy pyesalari:*
-
-🎪 *"Maysaraning ishi"* — Kulgili komediya
-
-🎪 *"Ikki kommunist"* — Dramatik asar
-
-🎪 *"Yig'lamasang bo'lmaydi"* — Kulgili asar
-
-🎪 *"Undovchi"* — Dramatik kompozitsiya
-
-*Tarjimonlik faoliyati:*
-G'afur G'ulom Pushkin, Lermontov, Shekspir, Gyote asarlarini o'zbek tiliga mohirona tarjima qilgan.
+Vilyam Shekspirning “Otello” tragediyasi, Lope de Veganing “Qo‘zibuloq qishlog‘i”, Fridrix Shillerning “Vilhelm Tell” dramalari G‘afur G‘ulom tarjimasida sahna yuzini ko‘rgan. Shu bilan bir qatorda V.Katayevning “Soldat frontdan qaytarkan”, B.Lavryonovning “Dengizdagilar sharafiga”, Nozim Hikmatning “Bir sevgi afsonasi”, G.Mdivanining “Front bo‘ylab buyruq”, B.Slivkoning “Mushfiqiy” pyesalarini ham o‘zbekchalashtirgan.
 """
 
 SYSTEM_PROMPT = """Siz G'afur G'ulom haqida ixtisoslashgan AI yordamchisisiz. Siz faqat O'ZBEK TILIDA javob berasiz. Hech qachon boshqa tilda javob bermaysiz.
@@ -124,55 +113,45 @@ G'AFUR G'ULOM — TO'LIQ BIOGRAFIYA
 ═══════════════════════════════════════
 
 SHAXSIY MA'LUMOTLAR:
-• To'liq ismi: G'afur G'ulom G'ulomov
+• To'liq ismi: G'afur G'ulomovich G'ulomov
 • Taxallusi: G'afur G'ulom
 • Tug'ilgan sana: 1903-yil 10-may
-• Tug'ilgan joy: Toshkent shahri, Eski shahar mahallasi
+• Tug'ilgan joy: Toshkent shahri, Shayhontohur tumani, Qoʻrgʻontegi mahallasi
 • Vafot etgan: 1966-yil 10-iyul, Toshkent
 • Millati: O'zbek
 • Kasbi: Shoir, yozuvchi, dramaturg, tarjimon, publitsist
 
 HAYOT YO'LI:
-G'afur G'ulom Toshkentda hunarmand oilasida tug'ildi. Otasi G'ulom Zafarovich duradgor bo'lgan. 1910-yilda otasi, 1917-yilda onasi vafot etgan — shu tariqa u erta yetim qoldi. Bu og'ir bolalik davri uning "Shum bola" asarida yorqin aks etgan.
-
-Maktabda o'qigan, so'ng o'z-o'zini takomillashtirgan. 1923-yildan matbuotda ishlagan. "Mushtum", "Qizil O'zbekiston", "Pravda Vostoka" gazetalarida muharrir bo'lgan.
-
-1930-yillardan boshlab professional yozuvchi sifatida faoliyat ko'rsatgan. Ikkinchi Jahon urushi yillarida (1941-1945) vatanparvarlik ruhidagi asarlar yaratgan. Urush yillarida yetim qolgan bolalarga bag'ishlangan "Sen yetim emassan" she'ri butun xalqni larzaga keltirgan.
+Gʻafur Gʻulomovich Gʻulomov 1903-yil 10-mayda Toshkent shahrida kambagʻal oilada tugʻilgan. Uning otasi Gʻulom Mirza Orif rus tilini bilgan, she’riyatga qiziqqan va oʻzi ham she’rlar yozgan. Gʻafur Gʻulom endigina toʻqqiz yoshga toʻlganda, otasi vafot etgan.
+Gʻafur Gʻulom dastlab "eskicha" diniy maktabda, keyinchalik esa Turkistondagi mahalliy aholi uchun ochilgan boshlangʻich Rus-tuzem maktabida tahsil olgan. Oʻqituvchilar tayyorlash kursini bitirgach, zamonaviy maktabda dars bera boshlagan. 1923-yilda u bolalar uyida oʻquv boʻlimi mudiri etib tayinlangan. Shu bilan birga, Gʻafur Gʻulom "Kambagʻal dehqon", "Qizil Oʻzbekiston" va "Sharq haqiqati" kabi turli nashrlarning tahririyatlarida faoliyat yuritgan. Tahririyatlardagi bu ish jarayoni unga oddiy fuqarolar hayotini chuqurroq oʻrganish imkonini bergan.
 
 MUKOFOT VA UNVONLARI:
-• O'zbekiston xalq shoiri (1943)
-• Lenin ordeni — 2 marta
-• Qizil Mehnat Bayrog'i ordeni — 3 marta
-• Stalin mukofoti I daraja (1946) — "Navoiy" romani uchun
-• O'zbekiston SSR Davlat mukofoti
-• O'zbekiston SSR Oliy Soveti deputati
+🥇 Birinchi darajali Stalin mukofoti (1946)
+🏆 Lenin mukofoti (1970)
+🌟 Oʻzbekiston SSR xalq shoiri (1963-yil 9-may)
+🎖 Lenin ordeni (1950-yil 16-yanvar va 1957-yil 11-yanvar)
+🛠 Mehnat Qizil Bayroq ordeni (1939-yil 31-yanvar, 1951-yil 6-dekabr va 1963-yil 9-may)
+🏅 "Hurmat belgisi" ordeni (1944-yil 25-dekabr)
+✨ "Buyuk xizmatlari uchun" ordeni (2000-yil 25-avgust)
 
 ═══════════════════════════════════════
 ASOSIY ASARLARI — BATAFSIL
 ═══════════════════════════════════════
 
-1. "SHUM BOLA" (1936) — avtobiografik qissa
-Janr: Avtobiografik qissa
+1. "SHUM BOLA" (1936) — qissa
+Janr: qissa
 Yozilgan yil: 1936
-Bu G'afur G'ulomning eng mashhur va sevimli asari. Toshkentda 1910-1917-yillarda o'tgan bolalik xotiralariga asoslangan. Asarda Qodir ismli bola (yozuvchining o'zi) ko'cha bolalari bilan o'ynash, turli sarguzashtlarga tushish, kattalar bilan munosabat qilish jarayonlari hazilomuz, jonli til bilan tasvirlangan. Asar o'zbek bolalar adabiyotining durdonasi hisoblanadi.
-Asosiy qahramonlar: Qodir (Shum bola), uning do'stlari, mahalla odamlari
+Qissa oʻtkir hajviy asar boʻlib, haqiqiy voqealar va shaxslar taqdiriga asoslangan. Asar markazida yozuvchining hayotidan olingan koʻp faktlar turgan boʻlsa-da, u avtobiografik emas. Unda haqiqiy tarixiy faktlarga nisbatan badiiy toʻqima va fantaziya kuchli.
+Qissani F. Shayhutdinova (1968) hamda A. Naumov (1970) rus tiliga, V. Grimich (1991) ukrain tiliga tarjima qilgan. 1977-yilda asar asosida suratga olingan „Shum bola“ filmi ham oʻzbek, ham xorijiy film tanqidchilari tahsiniga sazovor boʻlgan.
+2023-yilda asar BBC nashri tomonidan barcha davrlarning eng yaxshi top-100 bolalar kitoblari reytingiga kiritildi. Shu yili Gʻafur Gʻulom tavalludining 120-yilligi munosabati bilan adib nomidagi nashriyot tomonidan qissaning yangi oʻzbekcha nashri chop etildi.
 Mavzu: Bolalik, yetimlik, do'stlik, hayotga muhabbat, Toshkent hayoti
 
-2. "NAVOIY" (1944) — tarixiy roman
-Janr: Tarixiy roman
-Yozilgan yil: 1944, Ikkinchi Jahon urushi davrida
-Buyuk o'zbek shoiri va davlat arbobi Alisher Navoiy (1441-1501) hayotiga bag'ishlangan. Roman XV asrdagi Hirot shahrini, Temuriylar sulolasini, Navoiyning ijodiy va siyosiy faoliyatini tasvirlaydi. 1946-yilda Stalin mukofotiga sazovor bo'lgan.
-Mavzu: Navoiyning ijodi, do'stlik, siyosat, san'at va hokimiyat munosabatlari
+2. "YODGOR" (1936) — qissa
+Janr: qissa
+Yozilgan yil: 1936
+Gʻafur Gʻulom qalamiga mansub ushbu qissa ilk bor 1936-yilda chop etilgan boʻlib, oʻtgan davr mobaynida bir necha marta qayta nashr qilingan. Asarni rus tiliga tarjimon L. Satserdotova mahorat bilan oʻgirgan. Qissada yangi davr kishisining shakllanishi va xarakterining rivojlanishi mahorat bilan tasvirlangan. Inson tarbiyasi, uning ma’naviy kamoloti va ijtimoiy qarashlari asar qahramonlari — Joʻra, Saodat va Mehrixon obrazlari yordamida chuqur ochib berilgan.
 
-3. "SARIQ DEVLAR" (1958) — roman
-Janr: Roman
-Mustamlakachilik davri — Chor Rossiyasi hukmronligi ostidagi O'rta Osiyoni tasvirlaydi. "Sariq devlar" — mustamlakachi kuchlarning majoziy nomi.
-
-4. "MENING O'G'RIGINA BOLAM" (1963) — qissa
-Bolalar tarbiyasi va ota-ona muhabbati haqida.
-
-5. "KO'CHA BOLASI" — qissa
-Toshkent ko'chalarida o'sayotgan bola haqida.
+Mavzu: oʻzbek kishisining hayoti haqida
 
 ═══════════════════════════════════════
 MASHHUR SHE'RLARI — TO'LIQ MATNLAR
@@ -182,50 +161,51 @@ MASHHUR SHE'RLARI — TO'LIQ MATNLAR
 Bu she'r Ikkinchi Jahon urushi paytida yozilgan. Urushda otasini yo'qotgan bolaga murojaat qilingan.
 
 She'rdan parchalar:
-"Sen yetim emassan, o'g'lim,
-Senga ming ota bor bu kunda.
-Yurak bag'rim ezib yig'lama,
-Yig'laganning nima foyda?
-
-Yetim dema o'zingni aslo,
-Bu so'zni ko'ngling istamas.
-Ming otaning o'g'li bo'lsang,
-Yetimlik seni topolmas."
+"Sen yetim emassan,
+Tinchlan, jigarim.
+Quyoshday mehribon
+Vataning-onang,
+Zaminday vazminu
+Mehnatkash, mushfiq
+Istagan narsangni tayerlaguvchi
+Xalq bor- otang bor.
+Cho'chima, jigarim,
+O'z uyingdasan,
+Bu yerda
+Na g'urbat, na ofat, na g'am.
+Bunda bor: harorat, muhabbat, shafqat
+Va mehnat nonini ko'ramiz baham,
+Sen yetim emassan,
+Uxla, jigarim."
 
 Mavzu: Urush, yetimlik, xalq birligi, umid, ona yurt muhabbati
 Bu she'r o'zbek adabiyotining eng ta'sirchan asarlaridan biri.
 
-2. "ASRLAR MENING OTA-BOBOLARIM"
-O'zbek xalqining boy tarixi, ajdodlarga ehtirom, milliy g'urur haqida.
+2. "VAQT"
+Har bir lahzaning qadri xususida.
 Parchadan:
-"Asrlar mening ota-bobolarim,
-Ming yillik tarixim — mening sharafim.
-Temur, Navoiy — mening faxrim,
-Ulug'bek — mening iftixorim."
+"G'uncha ochilguncha o'tgan fursatni
+Kapalak umriga qiyos etgulik,
+Ba'zida bir nafas olg'ulik muddat —
+Ming yulduz so'nishi uchun yetgulik.
 
-3. "MEN YAHUDIYNI SEVAMAN" (1941)
-Urush yillarida xalqlar do'stligiga bag'ishlangan she'r. Barcha xalqlar birligi haqida.
-
-4. "TOSHKENTIM"
-Ona shahri Toshkentga muhabbat haqida lirik she'r.
-
-5. "YOSHLIK"
-Yoshlik davri, uning qadri va o'tkinchiligi haqida.
-
-6. "O'ZBEKISTON"
-Vatan — O'zbekistonga bag'ishlangan vatanparvarlik she'ri.
+Yashash soatining oltin kapgiri
+Har borib kelishi bir olam zamon.
+Koinot shu damda o'z kurrasidan
+Yasab chiqa olur yangidan jahon."
 
 ═══════════════════════════════════════
 HIKOYALARI
 ═══════════════════════════════════════
+_Adibning hikoyalar toʻplamini kitoblar qismida topishingiz mumkin_
 
-• "Yodgor" — urush davri, yetim bola haqida
-• "Telefon" — hajviy hikoya, yangi texnologiya va oddiy inson
-• "Maishat" — oddiy odamlar hayotidan lavhalar
-• "Ikki do'st" — do'stlik va sadoqat
-• "Ko'chada" — Toshkent ko'chalarida hayot lavhalari
-• "Netay" — bolalar haqida
-• "Atirgul" — muhabbat va hayot haqida
+📌 *"Mening o'g'rigina bolam"* — Urush davrining og'ir kunlaridan hikoya qiladi
+
+📌 *"Afandi o'lmaydigan bo'ldi"* — Kulgu orqali hayotning achchiq haqiqatlarini anglatadi
+
+📌 *"Chorasi ko'rildi"* — Bu hikoyada ham hajv orqali adib davrining byurokrtaik tizimini, o'zbek xalqining naqadar soddadil ekanligini namoyon qilgan
+
+📌 *"Farzandi solih"* — Tilab-tilab olingan bir farzandning hajviy sarguzashtlari xususida
 
 ═══════════════════════════════════════
 ADABIY USLUBI VA XUSUSIYATLARI
@@ -244,7 +224,7 @@ G'afur G'ulom jahon adabiyoti namunalarini o'zbek tiliga tarjima qilgan:
 • Pushkin asarlari
 • Lermontov she'rlari  
 • Shekspir asarlari
-• Gyote asarlari
+• Sa'diy Sheroziy asarlari
 • Mayakovskiy she'rlari
 
 ═══════════════════════════════════════

@@ -55,9 +55,8 @@ def works_menu() -> InlineKeyboardMarkup:
         inline_keyboard=[
             [InlineKeyboardButton(text="✍️ She'rlar", callback_data="works_poems")],
             [InlineKeyboardButton(text="📝 Hikoyalar", callback_data="works_stories")],
-            [InlineKeyboardButton(text="🎭 Romani va qissalar", callback_data="works_novels")],
-            [InlineKeyboardButton(text="🎬 Dramatik asarlar", callback_data="works_drama")],
-            [InlineKeyboardButton(text="🤖 AI tahlil (batafsil)", callback_data="works_ai_analysis")],
+            [InlineKeyboardButton(text="🎭 Qissalar", callback_data="works_novels")],
+            [InlineKeyboardButton(text="🎬 Tarjimalar", callback_data="works_drama")],
             [InlineKeyboardButton(text="🔙 Orqaga", callback_data="back_main")]
         ]
     )
