@@ -9,14 +9,14 @@ router = Router()
 WELCOME_TEXT = """
 🌟 *Assalomu alaykum!*
 
-*G'AFUR G'ULOM BOTiga xush kelibsiz!*
+*G'AFUR G'ULOM HAYOTI VA IJODINI YORITUVCHI BOTGA XUSH KELIBSIZ!*
 
 Men sizga buyuk o'zbek shoiri va yozuvchisi *G'afur G'ulom* (1903-1966) haqida har qanday ma'lumot bera olaman.
 
 *Nima qila olaman:*
-🤖 *AI suhbat* — Istalgan savolingizga javob beraman
-📚 *Kitoblar* — Elektron asarlarni yuklab olish
-🎧 *Audio* — Hikoya va she'rlarni tinglash
+🤖 *Testlar* — Adibning hayoti va ijodini qanchalik bilasiz? Sinab ko'ring!
+📚 *Kitoblar* — Elektron asarlarni yuklab oling
+🎧 *Audio* — Hikoya va she'rlarni tinglang
 📖 *Asarlar* — Barcha asarlari haqida ma'lumot
 ℹ️ *Tarjimayi hol* — Hayot yo'li
 
@@ -44,12 +44,7 @@ async def cmd_help(message: Message):
 */stories* — Hikoyalar
 */books* — Kitoblar
 
-*Qo'shimcha:*
-• Istalgan savolingizni yozsangiz, AI javob beradi
-• Kitob yoki audio so'rasangiz, yuboriladi
-• "AI bilan suhbat" tugmasini bosib, chuqur suhbat boshlang
-
-📞 *Muammo bo'lsa:* @admin ga yozing
+📞 *Muammo bo'lsa:* @UsmonovIbrohim ga yozing
     """
     await message.answer(help_text, parse_mode="Markdown", reply_markup=main_menu())
 

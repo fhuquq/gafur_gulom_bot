@@ -76,7 +76,6 @@ async def show_books(message: Message):
     await message.answer(
         f"📚 *G'AFUR G'ULOM KITOBLARI*\n\n"
         f"📄 Yuklab olish uchun: *{pdf_count} ta* (PDF)\n"
-        f"🤖 AI uchun matnlar: *{txt_count} ta* (TXT)\n\n"
         "PDF kitobni tanlang 👇",
         reply_markup=books_keyboard(),
         parse_mode="Markdown"

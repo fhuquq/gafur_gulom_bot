@@ -198,7 +198,8 @@ Mening Jigarim!"""
     },
     "vaqt": {
         "nomi": "VAQT",
-        "matn": """G'uncha ochilguncha o'tgan fursatni
+        "matn": """
+G'uncha ochilguncha o'tgan fursatni
 Kapalak umriga qiyos etgulik,
 Ba'zida bir nafas olg'ulik muddat —
 Ming yulduz so'nishi uchun yetgulik.
