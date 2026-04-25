@@ -7,7 +7,7 @@ def main_menu() -> ReplyKeyboardMarkup:
     return ReplyKeyboardMarkup(
         keyboard=[
             [
-                KeyboardButton(text="🔍 Qidirish"),
+                KeyboardButton(text="🧩 Test"),
                 KeyboardButton(text="📚 Kitoblar")
             ],
             [
@@ -23,7 +23,7 @@ def main_menu() -> ReplyKeyboardMarkup:
             ]
         ],
         resize_keyboard=True,
-        input_field_placeholder="Menyu tanlang yoki so'z qidiring..."
+        input_field_placeholder="Menyu tanlang..."
     )
 
 def books_menu() -> InlineKeyboardMarkup:
@@ -55,7 +55,8 @@ def works_menu() -> InlineKeyboardMarkup:
         inline_keyboard=[
             [InlineKeyboardButton(text="✍️ She'rlar", callback_data="works_poems")],
             [InlineKeyboardButton(text="📝 Hikoyalar", callback_data="works_stories")],
-            [InlineKeyboardButton(text="🎭 Qissalari", callback_data="works_novels")],
+            [InlineKeyboardButton(text="🎭 Romani va qissalar", callback_data="works_novels")],
+            [InlineKeyboardButton(text="🎬 Dramatik asarlar", callback_data="works_drama")],
             [InlineKeyboardButton(text="🤖 AI tahlil (batafsil)", callback_data="works_ai_analysis")],
             [InlineKeyboardButton(text="🔙 Orqaga", callback_data="back_main")]
         ]

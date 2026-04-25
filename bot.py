@@ -3,7 +3,7 @@ import logging
 import os
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
-from handlers import start, ai_chat, books, audio, about
+from handlers import start, ai_chat, books, audio, about, quiz
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -25,6 +25,7 @@ async def main():
     dp = Dispatcher(storage=storage)
 
     dp.include_router(start.router)
+    dp.include_router(quiz.router)
     dp.include_router(ai_chat.router)
     dp.include_router(books.router)
     dp.include_router(audio.router)
